@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d57b75da-bffe-4a58-ad8f-162ad28e87ac" name="llmsys">
+        <fileTransfer accessType="SFTP" host="123.57.147.138" port="1230" sshConfigId="da76654a-5892-4c28-8cbb-c29bb6963c2e" sshConfig="llmsys">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
