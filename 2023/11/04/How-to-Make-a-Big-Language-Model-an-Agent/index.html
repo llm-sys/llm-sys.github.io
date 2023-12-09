@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>LLMSYS - </title>
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+      
+<link rel="stylesheet" href="/css/helpers.css">
+    
+    
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="LLMSYS" type="application/atom+xml">
+</head>
+
+
+<body>
+  <div class="loading-wrapper" data-loading="true">
+    <div class="loading">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="page" data-filter="true">
+    <div class="head" data-show="true">
+      <header class="head-header">
+  <div class="head-author">
+    <a href="/" class="head-author-link">
+      LLMSYS</a>
+    </div>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        Search</span>
+    </div> -->
+    <button class="bar-wrap" id="bar-wrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-about-link" href="/2023/06/03/hello-world">
+        关于</a>
+      
+    </div>
+  </div>
+</header>
+
+    </div>
+    <div class="main">
+      
+
+<div class="menu-bar-head" id="menu-bar" data-show="false">
+  <ul class="menu-bar-ul">
+    
+      
+      <li class="menu-bar-item ">
+          
+              <a href="/categories/Posts/">
+          
+              <span>Posts1</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item ">
+          
+              <a href="/categories/Posts2/">
+          
+              <span>Posts2</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item  border ">
+          
+            <a href="/archives">
+          
+              <span>Archives</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item ">
+          
+            <a href="/tags">
+          
+              <span>Tags</span>
+            </a>
+      </li>
+    
+    
+      <li class="menu-bar-item">
+        <a href="/2023/06/03/hello-world">
+          <span>关于</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2023/11/04/How-to-Make-a-Big-Language-Model-an-Agent/">
+        How to Make a Big Language Model an Agent
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2023-11-04 21:01:23" datetime="2023-11-04T21:01:23.000Z" itemprop="datePublished">
+  2023-11-04</time>
+    </div>
+    |
+    <div class="post-tag">
+      
+    </div>
+    |
+    
+  
+
+    <div class="post-visit">
+      <span id="busuanzi_container_page_pv">
+        <span id="busuanzi_value_page_pv"></span>
+        hits
+      </span>
+    </div>
+
+  
+
+
+  </div>
+
+  
+    <div class="post-word-count">
+      
+
+本文共4896字。
+
+    </div>
+  
+
+  
+
+  
+    <div class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc" data-expand="true">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#How-to-Make-a-Big-Language-Model-an-Agent"><span class="post-toc-number">1.</span> <span class="post-toc-text">How to Make a Big Language Model an Agent</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E4%B8%AA-Agent-%E7%9A%84%E8%AF%9E%E7%94%9F-%E2%80%94%E2%80%94-Agent-%E6%A1%86%E6%9E%B6"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">一个 Agent 的诞生 —— Agent 框架</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8E%A7%E5%88%B6%E7%AB%AF%EF%BC%9ABrain"><span class="post-toc-number">1.0.1.1.</span> <span class="post-toc-text">控制端：Brain</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%A1%8C%E5%8A%A8%E7%AB%AF%EF%BC%9AAction"><span class="post-toc-number">1.0.1.2.</span> <span class="post-toc-text">行动端：Action</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E6%B3%A8%E5%85%A5Agent-%E8%83%BD%E5%8A%9B%E2%80%94%E2%80%94Agent-tuning"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">用数据集注入Agent 能力——Agent tuning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#overview"><span class="post-toc-number">1.0.2.0.1.</span> <span class="post-toc-text">overview</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#instruction-generation"><span class="post-toc-number">1.0.2.0.2.</span> <span class="post-toc-text">instruction generation</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#trajectory-interaction"><span class="post-toc-number">1.0.2.0.3.</span> <span class="post-toc-text">trajectory interaction</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#trajectory-filtering"><span class="post-toc-number">1.0.2.0.4.</span> <span class="post-toc-text">trajectory filtering</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Instruct-tuning"><span class="post-toc-number">1.0.2.0.5.</span> <span class="post-toc-text">Instruct tuning</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+        <a class="post-toc-toggle" onclick="toggleToc(this, expend, collapse);" href="javascript:;">
+            Expand
+        </a>
+    </div>
+   
+
+
+  <div class="article-entry" itemprop="articleBody">
+    <h1 id="How-to-Make-a-Big-Language-Model-an-Agent"><a href="#How-to-Make-a-Big-Language-Model-an-Agent" class="headerlink" title="How to Make a Big Language Model an Agent"></a>How to Make a Big Language Model an Agent</h1><p>长期以来，研究者们一直在追求与人类相当、乃至超越人类水平的通用人工智能（Artificial General Intelligence，AGI）。早在 1950 年代，Alan Turing 就将「智能」的概念扩展到了人工实体，并提出了著名的图灵测试。这些人工智能实体通常被称为 —— 代理（Agent*）。「代理」这一概念起源于哲学，描述了一种拥有欲望、信念、意图以及采取行动能力的实体。在人工智能领域，这一术语被赋予了一层新的含义：<strong>具有自主性、反应性、积极性和社交能力特征的智能实体</strong>。</p>
+<p>*<em>Agent 术语的中文译名并未形成共识，有学者将其翻译为智能体、行为体、代理或智能代理，本文中出现的「代理」和「智能代理」均指代 Agent。</em></p>
+<p>从那时起，代理的设计就成为人工智能社区的焦点。然而，过去的工作主要集中在增强代理的特定能力，如符号推理或对特定任务的掌握（国际象棋、围棋等）。这些研究更加注重算法设计和训练策略，而忽视了模型固有的通用能力的发展，如知识记忆、长期规划、有效泛化和高效互动等。事实证明，<strong>增强模型固有能力是推动智能代理进一步发展的关键因素。</strong></p>
+<p>大型语言模型（LLMs）的出现为智能代理的进一步发展带来了希望。如果将 NLP 到 AGI 的发展路线分为五级：语料库、互联网、感知、具身和社会属性，那么目前的大型语言模型已经来到了第二级，具有互联网规模的文本输入和输出。在这个基础上，如果赋予 LLM-based Agents 感知空间和行动空间，它们将达到第三、第四级。进一步地，多个代理通过互动、合作解决更复杂的任务，或者反映出现实世界的社会行为，则有潜力来到第五级 —— 代理社会。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-27b3f8b096139aec85ff1eb81aa80c6f_720w.webp" alt="img"></p>
+<h3 id="一个-Agent-的诞生-——-Agent-框架"><a href="#一个-Agent-的诞生-——-Agent-框架" class="headerlink" title="一个 Agent 的诞生 —— Agent 框架"></a><strong>一个 Agent 的诞生 —— Agent 框架</strong></h3><p>拥有大模型加持的智能代理会是什么样？作者们受到达尔文「适者生存」法则的启发，提出了基于大模型的智能代理通用框架。一个人如果想要在社会中生存，就必须学会适应环境，因此需要具有认知能力，并且能够感知、应对外界的变化。同样，智能代理的框架也由三个部分组成：<strong>控制端（Brain）、感知端（Perception）和行动端（Action）。</strong></p>
+<ul>
+<li><strong>控制端</strong>：通常由 LLMs 构成，是智能代理的核心。它不仅可以存储记忆和知识，还承担着信息处理、决策等不可或缺的功能。它可以呈现推理和计划的过程，并很好地应对未知任务，反映出智能代理的泛化性和迁移性。</li>
+<li><strong>感知端</strong>：将智能代理的感知空间从纯文本拓展到包括文本、视觉和听觉等多模态领域，使代理能够更有效地从周围环境中获取与利用信息。</li>
+<li><strong>行动端</strong>：除了常规的文本输出，还赋予代理具身能力、使用工具的能力，使其能够更好地适应环境变化，通过反馈与环境交互，甚至能够塑造环境。</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/80/v2-8b47063c5a1d6b64bdc7c6713dbc8951_720w.webp" alt="img"></p>
+<p><em>LLM-based Agent 的概念框架，包含三个组成部分：控制端（Brain）、感知端（Perception）和行动端（Action）</em>。</p>
+<p>作者们用一个例子来说明来了 LLM-based Agent 的工作流程：当人类询问是否会下雨时，感知端（Perception）将指令转换为 LLMs 可以理解的表示。然后控制端（Brain）开始根据当前天气和互联网上的天气预报进行推理和行动规划。最后，行动端（Action）做出响应并将雨伞递给人类。</p>
+<p>通过重复上述过程，智能代理可以不断获得反馈并与环境交互。</p>
+<h4 id="控制端：Brain"><a href="#控制端：Brain" class="headerlink" title="控制端：Brain"></a><strong>控制端：Brain</strong></h4><p>控制端作为智能代理最核心的组成成分，作者们从五个方面展开介绍其能力：</p>
+<p><strong>自然语言交互：</strong>语言是沟通的媒介，其中包含着丰富的信息。得益于 LLMs 强大的自然语言生成和理解能力，智能代理能够通过自然语言与外界进行多轮交互，进而实现目标。具体而言，可以分为两个方面：</p>
+<ul>
+<li>高质量文本生成：大量评估实验表明，LLMs 能够生成流畅、多样、新颖、可控的文本。尽管在个别语言上表现欠佳，但整体上具备良好的多语言能力。</li>
+<li>言外之意的理解：除了直观表现出的内容，语言背后可能还传递了说话者的意图、偏好等信息。言外之意有助于代理更高效地沟通与合作，大模型已经展现出了这方面的潜力。</li>
+</ul>
+<p><strong>知识：</strong>基于大批量语料训练的 LLMs，拥有了存储海量知识（Knowledge）的能力。除了语言知识以外，常识知识和专业技能知识都是 LLM-based Agents 的重要组成部分。</p>
+<p>虽然 LLMs 其本身仍然存在知识过期、幻觉等问题，现有的一些研究通过知识编辑或调用外部知识库等方法，可以在一定程度上得到缓解。</p>
+<p><strong>记忆：</strong>在本文框架中，记忆模块（Memory）储存了代理过往的观察、思考和行动序列。通过特定的记忆机制，代理可以有效地反思并应用先前的策略，使其借鉴过去的经验来适应陌生的环境。</p>
+<p>通常用于提升记忆能力的方法有三种：</p>
+<ul>
+<li>扩展 Backbone 架构的长度限制：针对 Transformers 固有的序列长度限制问题进行改进。</li>
+<li>总结记忆（Summarizing）：对记忆进行摘要总结，增强代理从记忆中提取关键细节的能力。</li>
+<li>压缩记忆（Compressing）：通过使用向量或适当的数据结构对记忆进行压缩，可以提高记忆检索效率。</li>
+</ul>
+<p>此外，记忆的检索方法也很重要，只有检索到合适的内容，代理才能够访问到最相关和准确的信息。</p>
+<p><strong>推理 &amp; 规划：</strong>推理能力（Reasoning）对于智能代理进行决策、分析等复杂任务而言至关重要。具体到 LLMs 上，就是以 思维链（Chain-of-Thought，CoT） 为代表的一系列提示方法。而规划（Planning）则是面对大型挑战时常用的策略。它帮助代理组织思维、设定目标并确定实现这些目标的步骤。在具体实现中，规划可以包含两个步骤：</p>
+<ul>
+<li>计划制定（Plan Formulation）：代理将复杂任务分解为更易于管理的子任务。例如：一次性分解再按顺序执行、逐步规划并执行、多路规划并选取最优路径等。在一些需要专业知识的场景中，代理可与特定领域的 Planner 模块集成，提升能力。</li>
+<li>计划反思（Plan Reflection）：在制定计划后，可以进行反思并评估其优劣。这种反思一般来自三个方面：借助内部反馈机制；与人类互动获得反馈；从环境中获得反馈。</li>
+</ul>
+<p><strong>迁移性 &amp; 泛化性：</strong>拥有世界知识的 LLMs 赋予智能代理具备强大的迁移与泛化能力。一个好的代理不是静态的知识库，还应具备动态的学习能力：</p>
+<ul>
+<li>对未知任务的泛化：随着模型规模与训练数据的增大，LLMs 在解决未知任务上涌现出了惊人的能力。通过指令微调的大模型在 zero-shot 测试中表现良好，在许多任务上都取得了不亚于专家模型的成绩。</li>
+<li>情景学习（In-context Learning）：大模型不仅能够从上下文的少量示例中进行类比学习，这种能力还可以扩展到文本以外的多模态场景，为代理在现实世界中的应用提供了更多可能性。</li>
+<li>持续学习（Continual Learning）：持续学习的主要挑战是灾难性遗忘，即当模型学习新任务时容易丢失过往任务中的知识。专有领域的智能代理应当尽量避免丢失通用领域的知识。</li>
+</ul>
+<p>####感知端：Perception</p>
+<p>人类通过多模态的方式感知世界，所以研究者们对 LLM-based Agents 抱有同样的期待。多模态感知能加深代理对工作环境的理解，显著提升了其通用性。</p>
+<p><strong>文本输入：</strong>作为 LLMs 最基础的能力，这里不再赘述。</p>
+<p><strong>视觉输入：</strong>LLMs 本身并不具备视觉的感知能力，只能理解离散的文本内容。而视觉输入通常包含有关世界的大量信息，包括对象的属性，空间关系，场景布局等等。常见的方法有：</p>
+<ul>
+<li>将视觉输入转为对应的文本描述（Image Captioning）：可以被 LLMs 直接理解，并且可解释性高。</li>
+<li>对视觉信息进行编码表示：以视觉基础模型 + LLMs 的范式来构成感知模块，通过对齐操作来让模型理解不同模态的内容，可以端到端的方式进行训练。</li>
+</ul>
+<p><strong>听觉输入：</strong>听觉也是人类感知中的重要组成部分。由于 LLMs 有着优秀的工具调用能力，一个直观的想法就是：代理可以将 LLMs 作为控制枢纽，通过级联的方式调用现有的工具集或者专家模型，感知音频信息。此外，音频也可以通过频谱图（Spectrogram）的方式进行直观表示。频谱图可以作为平面图像来展示 2D 信息，因此，一些视觉的处理方法可以迁移到语音领域。</p>
+<p><strong>其他输入：</strong>现实世界中的信息远不止文本、视觉和听觉。作者们希望在未来，智能代理能配备更丰富的感知模块，例如触觉、嗅觉等器官，用于获取目标物体更加丰富的属性。同时，代理也能对周围环境的温度、湿度和明暗程度有清楚的感受，采取更 Environment-aware 的行动。</p>
+<p>此外，还可以为代理引入对更广阔的整体环境的感知：采用激光雷达、GPS、惯性测量单元等成熟的感知模块。</p>
+<h4 id="行动端：Action"><a href="#行动端：Action" class="headerlink" title="行动端：Action"></a><strong>行动端：Action</strong></h4><p>在大脑做出分析、决策后，代理还需要做出行动以适应或改变环境：</p>
+<p><strong>文本输出：</strong>作为 LLMs 最基础的能力，这里不再赘述。</p>
+<p><strong>工具使用：</strong>尽管 LLMs 拥有出色的知识储备和专业能力，但在面对具体问题时，也可能会出现鲁棒性问题、幻觉等一系列挑战。与此同时，工具作为使用者能力的扩展，可以在专业性、事实性、可解释性等方面提供帮助。例如，可以通过使用计算器来计算数学问题、使用搜索引擎来搜寻实时信息。</p>
+<p>另外，工具也可以扩展智能代理的行动空间。例如，通过调用语音生成、图像生成等专家模型，来获得多模态的行动方式。因此，如何让代理成为优秀的工具使用者，即学会如何有效地利用工具，是非常重要且有前景的方向。</p>
+<p>目前，主要的工具学习方法包括从演示中学习和从反馈中学习。此外，也可以通过元学习、课程学习等方式来让代理程序在使用各种工具方面具备泛化能力。更进一步，智能代理还可以进一步学习如何「自给自足」地制造工具，从而提高其自主性和独立性。</p>
+<p><strong>具身行动：</strong>具身（Embodyment）是指代理与环境交互过程中，理解、改造环境并更新自身状态的能力。具身行动（Embodied Action）被视为虚拟智能与物理现实的互通桥梁。</p>
+<p>传统的基于强化学习的 Agent 在样本效率、泛化性和复杂问题推理等方面存在局限性，而 LLM-based Agents 通过引入大模型丰富的内在知识，使得 Embodied Agent 能够像人类一样主动感知、影响物理环境。根据代理在任务中的自主程度或者说 Action 的复杂程度，可以有以下的原子 Action：</p>
+<ul>
+<li>Observation 可以帮助智能代理在环境中定位自身位置、感知对象物品和获取其他环境信息；</li>
+<li>Manipulation 则是完成一些具体的抓取、推动等操作任务；</li>
+<li>Navigation 要求智能代理根据任务目标变换自身位置并根据环境信息更新自身状态。</li>
+</ul>
+<p>通过组合这些原子行动，代理可以完成更为复杂的任务。例如「厨房的西瓜比碗大吗？」这类具身的 QA 任务。为了解决这个问题，代理需要导航到厨房，并在观察二者的大小后得出答案。</p>
+<p>受限于物理世界硬件的高成本和具身数据集缺乏等问题，目前具身行动的研究仍主要集中于游戏平台《我的世界》等虚拟沙盒环境中。因此，一方面作者们期待有一种更贴近现实的任务范式和评价标准，另一方面，也需要大家在高效构建相关数据集上面有更多的探索。</p>
+<h3 id="用数据集注入Agent-能力——Agent-tuning"><a href="#用数据集注入Agent-能力——Agent-tuning" class="headerlink" title="用数据集注入Agent 能力——Agent tuning"></a>用数据集注入Agent 能力——Agent tuning</h3><p><img src="/img/image-20231104204218581.png" alt="image-20231104204218581"></p>
+<p>论文背景: 大型语言模型（LLMs）在各种任务中表现出色，但在作为代理处理现实世界中的复杂任务时，与商业模型（如ChatGPT和GPT-4）相比仍然存在差距。</p>
+<p>过去的研究主要集中在设计特定代理任务的提示或框架，而缺乏对LLMs代理能力本身的改进研究。</p>
+<p>论文的Motivation: 为了实现LLMs的广义代理能力，本研究提出了AgentTuning方法，通过构建AgentInstruct数据集和混合指令调整策略，旨在增强LLMs的代理能力，同时保持其广义能力。通过实验证明，AgentTuning使得LLMs在代理任务上具有广义能力，并且在未见过的代理任务上与GPT-3.5相媲美。 </p>
+<h5 id="overview"><a href="#overview" class="headerlink" title="overview"></a>overview</h5><p><img src="https://p1k05ba99n.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg0M2M4YTk4ZGQyMDlkOWQ2ZDNkMjU1OTYzZGNiNGZfelY5cVJoWVRhNmJ4ZnUzQ2RuMkYwRENIRTJCY09QaERfVG9rZW46QnNyeGI4RnVSb3BZbEN4V05GemNwNkRybnVlXzE2OTkxMDE4Mzk6MTY5OTEwNTQzOV9WNA" alt="img"></p>
+<h5 id="instruction-generation"><a href="#instruction-generation" class="headerlink" title="instruction generation"></a>instruction generation</h5><p><img src="https://p1k05ba99n.feishu.cn/space/api/box/stream/download/asynccode/?code=MDJkZTE3MTk1NTY1M2M4NjhhZjg1YTYzNjE5YzAxYmFfNlJBU1JGNWNDYk0yUXhUOU5DalNwMG1hcWFUUVI3RThfVG9rZW46TEtJTWJIR3VNb0xqTXd4bWtHWmNDbFJTbmtnXzE2OTkxMDE4Mzk6MTY5OTEwNTQzOV9WNA" alt="img"></p>
+<p>上表展示了使用的数据集，如果一个任务(例如 ALFWorld、 WebShop、 Mind2Web 和 Knowledge Graph)有一个训练集，本文直接使用training split进行后续的阶段。对于没有训练集的操作系统和数据库任务，本文利用Task Derivation和Self-Instruct的思想(Wang et al。 ，2023c)来构建相应的指令。：</p>
+<ol>
+<li><strong>Task Derivation</strong> 对于与已经被广泛研究的场景相关的代理任务，本文可以直接从相似的数据集构造指令。因此，为了在数据库(DB)任务上构造指令，本文从 BIRD (Li et al。 ，2023)获得指令，BIRD 是一个只支持 SELECT 的数据库基准。本文运行了两种类型的任务派生。首先，本文使用问题和参考 SQL 语句在每个 BIRD 子任务中构造一个轨迹。然后，本文使用引用 SQL 语句查询数据库，以获得数据库的输出，并将其作为代理提交的答案。最后，本文要求 GPT-4填写给出上述信息的代理的想法。这样，本文可以直接从 BIRD 数据集生成正确的轨迹。</li>
+<li><strong>Self-Instruct</strong> 对于操作系统(OS)任务，由于难以获得涉及操作终端操作系统的指令，本文采用了自指令方法(Wang et al。 ，2023c)来构建任务。本文首先提示 GPT-4提出一些与操作系统相关的任务，以及对任务的解释、参考解决方案和评估脚本。然后，本文用任务提示另一个 GPT-4实例(求解器)并收集它的轨迹。任务完成后，本文运行参考解决方案，并使用评估脚本将其结果与来自求解器 GPT-4的结果进行比较。本文收集的轨迹，其中的参考解决方案和解决方案给出了相同的答案。对于 DB 任务，由于 BIRD 只包含 SELECT 数据，本文使用类似的自指令方法构造其他类型的数据库操作(INSERT、 UPDATE 和 DELETE)。</li>
+</ol>
+<h5 id="trajectory-interaction"><a href="#trajectory-interaction" class="headerlink" title="trajectory interaction"></a>trajectory interaction</h5><ol>
+<li><strong>Interaction Process</strong> 交互过程交互过程有两个主要部分。首先，本文给出了模型的任务描述和一个成功的一杆的例子。然后，真正的互动开始了。本文为模型提供了当前的指令和必要的信息。基于这个和以前的反馈，模型形成一个思想并采取行动。然后环境提供反馈，包括可能的更改或新信息。这个循环一直持续到模型达到其目标或者达到其令牌限制为止。如果模型连续三次重复相同的输出，本文认为它是一个重复性的失败。如果模型的输出格式错误，本文使用 BLEU 指标将其与所有可能的操作选择进行比较，并选择最接近的匹配作为该步骤的模型操作。</li>
+<li><strong>CoT</strong> <strong>Rationales</strong> 思维链(CoT)方法通过一步一步的推理过程显著提高了 LLM 的推理能力(Wei et al。 ，2022b)。因此，本文使用 ReAct (Yao et al。 ，2023)作为推理框架，在产生最终动作之前输出 CoT 解释(称为思想)。因此，在所收集的相互作用轨迹中的每一个动作都伴随着一个详细的解释跟踪，使模型能够学习导致该动作的推理过程。对于使用没有思想的任务派生生成的轨迹，本文使用 GPT-4来补充它们，以便与 ReAct 提示保持一致。</li>
+</ol>
+<h5 id="trajectory-filtering"><a href="#trajectory-filtering" class="headerlink" title="trajectory filtering"></a>trajectory filtering</h5><p>包含真实场景的代理任务带来了巨大的挑战。即使是 GPT-4也不能满足这些任务的期望。为了确保数据质量，本文严格筛选了它的交互轨迹。回想一下，每个交互轨迹都会得到一个奖励 r，这使得本文可以根据奖励自动选择高质量的轨迹。本文筛选所有任务的轨迹，除了 Mind2Web，基于 r &#x3D; 1的最终奖励，表明完全正确。然而，由于 Mind2Web 任务的困难，本文使用 r ≥23的阈值来确保本文获得足够数量的轨迹。在表2中，本文通过在7B 尺度下对过滤和未过滤的轨迹进行微调，证明了本文的过滤策略的有效性。与经过过滤轨迹训练的模型相比，经过未经过滤轨迹训练的模型在固定任务和固定任务上的表现都要差得多。这强调了代理任务的数据质量优于数据量的重要性。</p>
+<h5 id="Instruct-tuning"><a href="#Instruct-tuning" class="headerlink" title="Instruct tuning"></a>Instruct tuning</h5><ol>
+<li>使用了不同用户的交互轨迹（ShareGPT）</li>
+<li>将agent任务和通用任务混合</li>
+</ol>
+<p><strong>实验</strong></p>
+<p>略</p>
+<p><strong>结论</strong></p>
+<p>sft可以给模型注入agent能力</p>
+
+  </div>
+</article>
+
+    </div>
+    <footer class="footer-nav">
+      <div class="footer">
+        <div class="back-top" id="back-top" title="Back to top">
+          <i class="icon icon-chevron-bar-up"></i>
+        </div>
+        <span class="footer-msg">
+  
+
+  
+
+  
+  
+
+    <div>
+      <span id="busuanzi_container_site_pv">
+        <span id="busuanzi_value_site_pv">?</span> PV
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <span id="busuanzi_value_site_uv">?</span> UV
+      </span>
+    </div>
+
+  
+
+
+
+  Copyright &copy;
+  
+  
+  
+    <span class="timeDivide">-</span>
+    2023
+  
+  Fang Taosong.
+  Power by
+  <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  and
+  <a href="https://github.com/Cerallin/hexo-theme-yuzu"
+      target="_blank" rel="external nofollow" title="v2.4">
+    Theme Yuzu</a>.
+</span>
+
+      </div>
+    </footer>
+    
+
+
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+
+<script src="/js/theme.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+
+  
+  <script>
+      expend = "Expand";
+      collapse = "Collapse";
+  </script>
+  
+  
+<script src="/js/toc.js"></script>
+
+
+
+
+
+  </div>
+</body>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>LLMSYS - </title>
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+      
+<link rel="stylesheet" href="/css/helpers.css">
+    
+    
+  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="LLMSYS" type="application/atom+xml">
+</head>
+
+
+<body>
+  <div class="loading-wrapper" data-loading="true">
+    <div class="loading">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="page" data-filter="true">
+    <div class="head" data-show="true">
+      <header class="head-header">
+  <div class="head-author">
+    <a href="/" class="head-author-link">
+      LLMSYS</a>
+    </div>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        Search</span>
+    </div> -->
+    <button class="bar-wrap" id="bar-wrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-about-link" href="/2023/06/03/hello-world">
+        关于</a>
+      
+    </div>
+  </div>
+</header>
+
+    </div>
+    <div class="main">
+      
+
+<div class="menu-bar-head" id="menu-bar" data-show="false">
+  <ul class="menu-bar-ul">
+    
+      
+      <li class="menu-bar-item ">
+          
+              <a href="/categories/Posts/">
+          
+              <span>Posts1</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item ">
+          
+              <a href="/categories/Posts2/">
+          
+              <span>Posts2</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item  border ">
+          
+            <a href="/archives">
+          
+              <span>Archives</span>
+            </a>
+      </li>
+    
+      
+      <li class="menu-bar-item ">
+          
+            <a href="/tags">
+          
+              <span>Tags</span>
+            </a>
+      </li>
+    
+    
+      <li class="menu-bar-item">
+        <a href="/2023/06/03/hello-world">
+          <span>关于</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2023/12/10/Optimization-for-Modern-LLM-Online-Serving-Continuous-Batching-and-Paged-Attention/">
+        Optimization for Modern LLM Online Serving: Continuous Batching and Paged Attention
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2023-12-10 01:52:59" datetime="2023-12-10T01:52:59.000Z" itemprop="datePublished">
+  2023-12-10</time>
+    </div>
+    |
+    <div class="post-tag">
+      
+    </div>
+    |
+    
+  
+
+    <div class="post-visit">
+      <span id="busuanzi_container_page_pv">
+        <span id="busuanzi_value_page_pv"></span>
+        hits
+      </span>
+    </div>
+
+  
+
+
+  </div>
+
+  
+    <div class="post-word-count">
+      
+
+本文共774字。
+
+    </div>
+  
+
+  
+
+  
+    <div class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc" data-expand="true">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Optimization-for-Modern-LLM-Online-Serving-Continuous-Batching-and-Paged-Attention"><span class="post-toc-number">1.</span> <span class="post-toc-text">Optimization for Modern LLM Online Serving: Continuous Batching and Paged Attention</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Continuous-Batching"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">Continuous Batching</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Paged-Attention"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">Paged Attention</span></a></li></ol></li></ol></li></ol>
+        </nav>
+        <a class="post-toc-toggle" onclick="toggleToc(this, expend, collapse);" href="javascript:;">
+            Expand
+        </a>
+    </div>
+   
+
+
+  <div class="article-entry" itemprop="articleBody">
+    <h1 id="Optimization-for-Modern-LLM-Online-Serving-Continuous-Batching-and-Paged-Attention"><a href="#Optimization-for-Modern-LLM-Online-Serving-Continuous-Batching-and-Paged-Attention" class="headerlink" title="Optimization for Modern LLM Online Serving: Continuous Batching and Paged Attention"></a>Optimization for Modern LLM Online Serving: Continuous Batching and Paged Attention</h1><p>不知不觉🕊了有点久，本次我们盘点一下面向大模型的服务系统（引擎）的设计相比于一些传统的机器学习服务系统的改进：</p>
+<h3 id="Continuous-Batching"><a href="#Continuous-Batching" class="headerlink" title="Continuous Batching"></a>Continuous Batching</h3><p>The compute utilization in serving LLMs can be improved by batching multiple requests. Because the requests share the same model weights, the overhead of moving weights is amortized across the requests in a batch, and can be overwhelmed by the computational overhead when the batch size is sufficiently large. However, batching the requests to an LLM service is non-trivial for two reasons. First, the requests may arrive at different times. A naive batching strategy would either make earlier requests wait for later ones or delay the incoming requests until earlier ones finish, leading to significant queueing delays. Second, the requests may have vastly different input and output lengths (Fig. 11). A straightforward batching technique would pad the inputs and outputs of the requests to equalize their lengths, wasting GPU computation and memory. </p>
+<p>To address this problem, fine-grained batching mechanisms, such as cellular batching [16] and iteration-level scheduling [60], have been proposed. Unlike traditional methods that work at the request level, these techniques operate at the iteration level. After each iteration, completed requests are removed from the batch, and new ones are added. Therefore, a new request can be processed after waiting for a single iteration, not waiting for the entire batch to complete. Moreover, with special GPU kernels, these techniques eliminate the need to pad the inputs and outputs. By reducing the queueing delay and the inefficiencies from padding, the fine-grained batching mechanisms significantly increase the throughput of LLM serving.</p>
+<p>Continuous batching is a technique used to optimize the performance of large language models (LLMs) by improving the efficiency of their inference. It is a system-level optimization that can produce 10 times or more difference in actual workloads. The technique is also known as dynamic batching or batching with iteration-level scheduling.</p>
+<p><img src="http://myimg2.constfrost.com//hw/image-20231210015720268.png" alt="image-20231210015720268"></p>
+<p>In traditional static batching, the batch size remains constant throughout the inference process. However, LLMs have an iterative inference process, which means that the length of the generated sequence is not known beforehand. This leads to underutilization of the GPU’s processing power and memory bandwidth. Continuous batching solves this problem by dynamically adjusting the batch size based on the length of the generated sequence. This allows the GPU to process more sequences in parallel, leading to higher throughput and lower latency.</p>
+<p>Continuous batching is implemented using a technique called iteration-level scheduling. In this technique, the GPU processes multiple sequences in parallel, but each sequence is processed iteratively. The batch size is adjusted dynamically based on the length of the generated sequence. This allows the GPU to process more sequences in parallel, leading to higher throughput and lower latency.</p>
+<p>The following LaTeX formula shows how the length of the generated sequence is used to adjust the batch size:<br>$$<br>batch_size &#x3D; \frac{max_batch_size}{1 + \frac{length}{iteration_size}}<br>$$<br>where <code>max_batch_size</code> is the maximum batch size, length is the length of the generated sequence, and iteration_size is the number of iterations required to generate the sequence.</p>
+<p>Continuous batching is a powerful optimization technique that can significantly improve the performance of LLMs. It is widely used in modern LLM inference systems and has become an essential tool for ML engineers working with large language models.</p>
+<h3 id="Paged-Attention"><a href="#Paged-Attention" class="headerlink" title="Paged Attention"></a>Paged Attention</h3><p><strong>Paged Attention</strong> is an attention algorithm that is inspired by the classical virtual memory and paging techniques in operating systems. It is used to manage memory efficiently in large language models (LLMs) serving systems.</p>
+<p><img src="http://myimg2.constfrost.com//hw/image-20231210011405540.png" alt="image-20231210011405540"></p>
+<p>The key-value cache (KV cache) memory for each request in LLMs serving systems is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. Paged Attention addresses this problem by allowing non-contiguous storage of contiguous KV tensors. It divides the KV cache of each sequence into blocks, each containing a fixed number of tokens. During attention calculation, it can efficiently locate and retrieve those blocks.</p>
+<p>On top of Paged Attention, vLLM is built, which is an LLM serving system that achieves near-zero waste in KV cache memory and flexible sharing of KV cache within and across requests to further reduce memory usage. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2309.06180">vLLM improves the throughput of popular LLMs by 2-4 × with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca </a></p>
+
+  </div>
+</article>
+
+    </div>
+    <footer class="footer-nav">
+      <div class="footer">
+        <div class="back-top" id="back-top" title="Back to top">
+          <i class="icon icon-chevron-bar-up"></i>
+        </div>
+        <span class="footer-msg">
+  
+
+  
+
+  
+  
+
+    <div>
+      <span id="busuanzi_container_site_pv">
+        <span id="busuanzi_value_site_pv">?</span> PV
+      </span>
+      <span id="busuanzi_container_site_uv">
+        <span id="busuanzi_value_site_uv">?</span> UV
+      </span>
+    </div>
+
+  
+
+
+
+  Copyright &copy;
+  
+  
+  
+    <span class="timeDivide">-</span>
+    2023
+  
+  Fang Taosong.
+  Power by
+  <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  and
+  <a href="https://github.com/Cerallin/hexo-theme-yuzu"
+      target="_blank" rel="external nofollow" title="v2.4">
+    Theme Yuzu</a>.
+</span>
+
+      </div>
+    </footer>
+    
+
+
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+
+<script src="/js/theme.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+
+  
+  <script>
+      expend = "Expand";
+      collapse = "Collapse";
+  </script>
+  
+  
+<script src="/js/toc.js"></script>
+
+
+
+
+
+  </div>
+</body>
