@@ -1,0 +1,28 @@
+nav:
+  more: 更多
+  home: 主页
+  tags: "标签："
+  archives: 归档
+  about: 关于
+  search: 搜索
+  category: "分类："
+
+post:
+  postTime: 发布于
+  tags: 标签
+  visit: 访问
+  donate: 赞赏
+  toc:
+    expand: 展开
+    collapse: 收起
+
+search:
+  search: 搜索
+
+article:
+  hits: 访问
+  copyright: "版权声明："
+
+not_found: "404没找到咯~"
+
+icp: icp备案

@@ -1,0 +1,28 @@
+nav:
+  more: More
+  home: Home
+  tags: Tags
+  archives: Archives
+  about: About
+  search: Search
+  category: "Category:"
+
+post:
+  postTime: Post
+  tags: Tags
+  visit: Visit
+  donate: donate
+  toc:
+    expand: Expand
+    collapse: Collapse
+
+search:
+  search: search
+
+article:
+  hits: hits
+  copyright: "Copyright: "
+
+not_found: "404 Not found."
+
+icp: "icp Record"

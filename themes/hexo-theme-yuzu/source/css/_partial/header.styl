@@ -1,0 +1,49 @@
+.head-header
+  height: 65px
+  line-height: 65px
+  max-width: 1000px
+  margin: 0 auto
+  width: 90%
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.head-author
+  display: inline-block
+
+  .head-author-link
+    font-size: title-font-size
+    font-weight: 200
+    text-decoration: none
+    text-color(primary-color, primary-color-light, primary-color-dark)
+
+.head-right
+  .head-about
+    display: inline-block
+    margin-left: 30px
+
+    .head-about-link
+      text-decoration: none
+      text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+
+  .bar-wrap
+    display: none
+    outline: none
+    padding: 9px 10px
+    background: transparent
+    border: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    -moz-user-select: none
+    user-select: none
+    cursor: pointer
+
+    .bar
+      display: block
+      width: 22px
+      height: 2px
+      background-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+      border-radius: 1px
+
+    .bar + .bar
+      margin-top: 4px

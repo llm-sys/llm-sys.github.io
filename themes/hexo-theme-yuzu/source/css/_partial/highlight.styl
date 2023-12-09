@@ -1,0 +1,151 @@
+@import './highlight-themes/atom-one-dark'
+@import './highlight-themes/atom-one-light'
+
+code-font-size = 16px
+code-font-family = 'Inconsolata', 'monospace', 'Open Sans', 'Microsoft Yahei', sans-serif
+$dark-mode = hexo-config('dark_mode')
+$smooth-corner = hexo-config('smooth_corner')
+
+if (!$dark-mode)
+  $code-foreground = $code-foreground-light
+  $code-background = $code-background-light
+  $code-attribute = $code-attribute-light
+  $code-built_in = $code-built_in-light
+  $code-comment = $code-comment-light
+  $code-keyword = $code-keyword-light
+  $code-number = $code-number-light
+  $code-string = $code-string-light
+  $code-symbol = $code-symbol-light
+  $code-title = $code-title-light
+else
+  $code-foreground = $code-foreground-dark
+  $code-background = $code-background-dark
+  $code-attribute = $code-attribute-dark
+  $code-built_in = $code-built_in-dark
+  $code-comment = $code-comment-dark
+  $code-keyword = $code-keyword-dark
+  $code-number = $code-number-dark
+  $code-string = $code-string-dark
+  $code-symbol = $code-symbol-dark
+  $code-title = $code-title-dark
+
+code, .code, .gutter, pre
+  padding: 7px
+  font-size: code-font-size
+  font-family: code-font-family
+  background-color($code-background, $code-background-light, $code-background-dark)
+
+.highlight
+  margin: 1em 0
+  overflow-x: auto
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125)
+  border-radius: 5px
+
+  if ($smooth-corner)
+    smooth-corner(5, 5, 5)
+
+  table
+    position: relative
+    margin: 0 !important
+
+    .clipboard-btn
+      &[data-clicked=true]
+        .icon:before
+          @extend .icon-clipboard-check:before
+
+      @media (max-width: 768px)
+        display: none
+
+      position: absolute
+      top: 0
+      right: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 1.2 * content-font-size
+      height: 1.2 * content-font-size
+      padding: 0.25em
+      margin: 10px 1em
+      border-radius: 5px
+
+      if ($smooth-corner)
+        smooth-corner(5, 5, 100)
+
+      border-color(primary-gray, primary-gray-light, primary-gray-dark)
+      background-color(
+        $background-color,
+        background-color-light,
+        background-color-dark
+      )
+      cursor: pointer
+
+      .icon:before
+        @extend .icon-clipboard:before
+        font-size: content-font-size
+
+      &:hover
+        background-color(
+          primary-gray,
+          primary-gray-light,
+          primary-gray-dark
+        )
+
+        i
+          text-color(
+            primary-color,
+            primary-color-light,
+            primary-color-dark
+          )
+
+    .code
+      if ($smooth-corner)
+        padding-left: 1em
+        padding-right: 1em
+
+      pre
+        margin: 0
+
+  .gutter
+    width: 10px
+    text-align: right
+    text-color($code-comment, $code-comment-light, $code-comment-dark)
+
+    if (!hexo-config('code.line_number'))
+      display: none
+
+    pre
+      margin: 0
+
+  .line
+    line-height: 1.45em
+
+  table, tr
+    margin: 0
+    padding: 0
+    width: 100%
+    border-collapse: collapse
+
+  .code
+    .comment, .quote
+      text-color($code-comment, $code-comment-light, $code-comment-dark)
+
+    .keyword, .selector-tag, .addition
+      text-color($code-keyword, $code-keyword-light, $code-keyword-dark)
+
+    .number
+      text-color($code-number, $code-number-light, $code-number-dark)
+
+    .string, .meta .meta-string, .literal, .doctag, .regexp
+      text-color($code-string, $code-string-light, $code-string-dark)
+
+    .title, .section, .name, .selector-id, .selector-class
+      text-color($code-title, $code-title-light, $code-title-dark)
+
+    .attribute, .attr, .variable, .template-variable, .class .title, .type
+      text-color($code-attribute, $code-attribute-light, $code-attribute-dark)
+
+    .symbol, .bullet, .subst, .meta, .meta .keyword, .selector-attr, .selector-pseudo, .link
+      text-color($code-symbol, $code-symbol-light, $code-symbol-dark)
+
+    .built_in, .deletion
+      text-color($code-built_in, $code-built_in-light, $code-built_in-dark)

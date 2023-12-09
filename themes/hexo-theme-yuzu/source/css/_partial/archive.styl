@@ -1,0 +1,49 @@
+.archive-title
+  max-width: content-max-width
+  margin: 0.5em auto 1em auto
+
+.archives-wrap
+  max-width: content-max-width
+  margin: 0 auto
+
+  .archive-year
+    font-size: title-font-size
+    font-weight: 400
+    text-color(
+      primary-color,
+      primary-color-light,
+      primary-color-dark
+    )
+
+  .archives-year-cont
+    padding-top: 5px
+
+    .archive-item
+      margin: 15px 0px
+      padding-left: 0px
+      transition: all linear 0.2s
+
+      .archive-artDate
+        info-text()
+        display: block
+        float: left
+        line-height: 25px
+
+      .archive-arttitle
+        display: block
+        margin-left: 85px
+
+        a
+          text-color(primary-color, primary-color-light, primary-color-dark)
+
+      &:hover
+        padding-left: 5px
+
+        .archive-arttitle
+          a:hover
+            text-color(secondary-color, secondary-color-light, secondary-color-dark)
+
+.archive-pagination
+  max-width: content-max-width
+  margin: 0 auto
+  padding: 20px 0px 36px 0px

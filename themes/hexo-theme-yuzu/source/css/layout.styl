@@ -1,0 +1,236 @@
+$theme-selectable = hexo-config('selectable')
+
+html
+  font-size: default-font-size
+  font-family: default-font-family
+  box-sizing: border-box
+  background-color($background-color, background-color-light, background-color-dark)
+  scroll-behavior: smooth
+
+body
+  padding: 0
+  margin: 0
+  text-color(primary-color, primary-color-light, primary-color-dark)
+  vertical-align: baseline
+
+*
+  margin: 0px
+  padding: 0px
+  list-style: none
+  text-decoration: none
+
+  if (!$theme-selectable)
+    -webkit-user-select: none
+    -ms-user-select: none
+    -moz-user-select: none
+    user-select: none
+
+a, a:visited
+  text-color(primary-gray, primary-gray-light, secondary-color-dark)
+
+a:hover
+  text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+
+img
+  max-width: 100%
+  height: auto
+  display: inline-block
+  vertical-align: middle
+  $dark-mode = hexo-config('dark_mode')
+
+  if ($dark-mode == 'auto')
+    @media (prefers-color-scheme: dark)
+      filter: brightness(0.8)
+  else if ($dark-mode == true)
+    filter: brightness(0.8)
+
+del, s
+  text-decoration: line-through
+
+.page
+  // display: none;
+  margin-top: 0px
+
+.page .head
+  // display: none;
+  z-index: 9
+  top: 0
+  right: 0
+  left: 0
+  border-bottom: 1px solid
+  border-color($border-color, border-color-light, border-color-dark)
+  background-color($background-color, background-color-light, background-color-dark)
+
+@media screen and (max-width: 768px)
+  animation-time = 0.4s
+
+  @keyframes showHead
+    0%
+      top: -65px
+
+    100%
+      top: 0
+
+  @keyframes hideHead
+    0%
+      top: 0
+
+    100%
+      top: -65px
+
+  .page .head
+    position: fixed
+    top: 0
+    animation: showHead animation-time forwards
+
+    &[data-show=false]
+      animation: hideHead animation-time forwards
+
+  .about, .post-item .post-item-head .post-item-title a, .head-author-link
+    font-weight: 400 !important
+
+  .menu-nav, #head-about
+    display: none
+
+  .post-widget
+    width: 100%
+
+  #bar-wrap-toggle
+    display: inline-block
+
+  #index-content
+    width: 100%
+
+  .page .main
+    margin-top: 65px
+
+  .menu-bar-head
+    display: block
+    position: fixed
+    left: 0px
+    top: 65px
+    background-color($background-color, background-color-light, background-color-dark)
+    width: 100%
+    border-top: 1px solid
+    border-color(border-gray, border-gray-light, border-gray-dark)
+
+    box-shadow: 0 5px 10px
+    text-color(border-gray, border-gray-light, border-gray-dark)
+
+    &[data-show=false]
+      display: none
+
+  #post
+    width: 100%
+
+.page .main
+  margin-left: auto
+  margin-right: auto
+  width: 90%
+  max-width: 1000px
+
+.main > .post
+  width: 85%
+  float: left
+
+  .article-entry
+    p
+      line-height: 1.5em
+
+    a, a:visited
+      text-decoration: underline dashed
+      text-decoration-thickness: 1px
+      text-underline-position: under
+      decoration-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+      text-color(primary-color, primary-color-light, primary-color-dark)
+
+    a:hover
+      text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+
+
+.article-tag-list-item
+  display: inline
+  margin-right: 0.5rem
+
+.article-tag-list-item:last-of-type
+  margin-right: auto
+
+.article-entry
+  li
+    font-size: 20px
+    line-height: 2rem
+    text-indent: 2em
+
+  ul
+    padding-bottom: 0.75em
+
+    li
+      list-style: disc inside
+
+    ul
+      li
+        list-style: circle inside
+        padding-left: 2em
+
+  ol
+    padding-bottom: 0.75em
+
+    li
+      list-style: decimal inside
+
+.page .footer-nav
+  // display: none;
+  display: block
+  margin: 30px auto 0px
+  width: 100%
+  float: left
+
+  .footer
+    info-text()
+    margin: 0 auto
+    padding: 20px 0
+    border-top: 1px solid
+    border-color(border-color, border-color-light, border-color-dark)
+    max-width: 1000px
+    width: 90%
+    overflow: hidden
+
+    .footer-links
+      padding-top: 2em
+      padding-bottom: 1em
+      display: flex
+      align-items: flex-start
+      flex-wrap: wrap
+
+      .footer-links-column
+        width: 25%
+        @media (max-width: 768px) {
+          width: 50%
+        }
+
+        p
+          padding-right: 1em
+          padding-bottom: 1em
+
+    .icp
+      margin-bottom: 10px
+
+      .icp-text
+        vertical-align: middle
+
+.page .back-top
+  margin-right: 40px
+  cursor: pointer
+
+  .icon
+    float: right
+    font-size: 20px
+    font-weight: 600
+
+    &:hover
+      text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+
+.nav-icon
+  display: inline-block
+  width: 16px
+  height: 16px

@@ -1,0 +1,84 @@
+# ===========================================
+# Site Information Settings
+# ===========================================
+
+# 是否允许用户复制网站上的内容，仅仅是君子协定
+selectable: true
+
+# Dark mode
+# Available values: true, false, auto
+dark_mode: auto
+
+# Round corner
+# Warning: This feature is NOT fully tested on various browsers.
+smooth_corner: false
+
+# Code settings
+code:
+  # Force hide line numbers
+  line_number: false
+
+# Counting words
+word_count:
+  enable: true
+  mode: all # or en_only | zh_only
+  reading_time: false
+  reading_speed:
+    cn: 300
+    en: 160
+
+# Site creation time
+since: 2018
+
+# Set feed link (false | default | your feed link)
+# false: disable
+# default: use `atom.xml`, generator for `hexo-generator-feed`
+rss: default
+
+# ===========================================
+# Menu Settings
+# ===========================================
+menu:
+  Archives:
+    widget: Archives
+  Posts:
+    name: posts # category name
+    widget: Posts
+  Tags:
+    widget: Tags
+
+#other menu1
+# otherMenu1: Search
+#other Menu2
+otherMenu2:
+  About: /about
+
+# menu
+archive_type: 'yearly'
+tag_type: 'monthly'
+show_count: false
+
+# 是否开启toc
+# toc: true
+toc:
+  list_number: true  # 是否显示数字排序
+#Tag 页面的标题
+tagTitle: Tags
+
+# A sentense to show
+signature: 热爱生活，然后发现，处处都是阳光
+
+theme:
+  color: Default
+  fancybox: false
+excerpt_link: 更多
+
+# 辅助样式，默认开启
+helpers: true
+
+favicon: /img/favicon.ico
+
+# ===========================================
+# Version
+# ===========================================
+version: v2.4

@@ -1,0 +1,51 @@
+$toc-height = 2.25em + 1.75em * 4
+
+.post-widget
+  info-text()
+  padding-top: 1em
+  padding-bottom: 3em
+  width: 60%
+
+  .post-toc-toggle
+    primary-link-text()
+    font-size: info-font-size
+
+  .post-toc-wrap
+    max-height: $toc-height
+    margin-bottom: 1em
+    overflow: hidden
+
+    h4
+      padding-bottom: 0.25em
+      margin-bottom: 0.75em
+      border-bottom: 1px solid
+      border-color(border-gray, border-gray-light, border-gray-dark)
+      text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+
+    .post-toc
+      .post-toc-item
+        line-height: 1.75em
+        margin-left: 1em
+        text-indent: -1em
+        width: 100%
+        white-space: normal
+
+@keyframes showToc
+  0%
+    max-height: 2000px
+
+  100%
+    max-height: $toc-height
+
+@keyframes hideToc
+  0%
+    max-height: $toc-height
+
+  100%
+    max-height: 2000px
+
+#post-toc
+  animation: showToc 1s forwards
+
+  &[data-expand=false]
+    animation: hideToc 1s forwards
