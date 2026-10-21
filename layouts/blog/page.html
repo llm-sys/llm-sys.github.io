@@ -1,0 +1,49 @@
+{{ define "main" }}
+{{- $blog := site.GetPage "/blog" }}
+{{- $toc := and (ne .Params.toc false) (ge (len .Fragments.Headings) 1) (ge (len (.Fragments.HeadingsMap)) 3) }}
+<div class="progress" aria-hidden="true"></div>
+<article class="post">
+  <header class="post-head layout">
+    <div class="post-meta">
+      {{- with $blog }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{- if gt .WordCount 200 }}
+      <span>{{ .ReadingTime }} min read</span>
+      {{- end }}
+    </div>
+    {{ partial "card.html" (dict "page" . "level" 1) }}
+  </header>
+
+  <div class="post-body layout">
+    {{- if $toc }}
+    <nav class="toc toc--rail" aria-label="Contents">
+      <div class="toc__inner">
+        <p class="toc__title">Contents</p>
+        {{ .TableOfContents }}
+      </div>
+    </nav>
+    {{- end }}
+    <div class="prose prose--post{{ if eq .Params.figure_numbers false }} prose--nonum{{ end }}">
+      {{- if $toc }}
+      <details class="toc toc--inline">
+        <summary>Contents</summary>
+        {{ replace .TableOfContents `id="TableOfContents"` "" | safeHTML }}
+      </details>
+      {{- end }}
+      {{ .Content }}
+    </div>
+  </div>
+
+  <div class="post-end layout">
+    <div class="post-end__inner">
+      {{- if ne .Params.citation false }}
+      {{ partial "cite.html" . }}
+      {{- end }}
+      {{ partial "post-foot.html" . }}
+    </div>
+  </div>
+</article>
+{{- if .Store.Get "hasMermaid" }}
+{{ partial "mermaid.html" . }}
+{{- end }}
+{{ end }}

@@ -1,0 +1,71 @@
+baseURL = "https://llmsys.net/"
+locale = "en"
+title = "llm-sys"
+copyright = "llm-sys"
+timeZone = "Asia/Shanghai"
+enableRobotsTXT = true
+
+[params]
+  tagline = "Efficient backbones for super intelligence"
+  # Home page headline and the sentence beside it.
+  statement = "Efficient backbones for super intelligence"
+  description = "Research on how large language model architectures evolve, and how to make them cheaper to train and run."
+  intro = "We study how model architectures change, from attention and sparsity to the kernels that run them, and how to get the same model quality for less compute. Posts here explain our papers and the code behind them."
+  github = "https://github.com/llm-sys"
+  email = "fangtaosong@xiaohongshu.com"
+  # X/Twitter handle without "@", used for twitter:site.
+  twitter = ""
+
+[menus]
+  [[menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 10
+  [[menus.main]]
+    name = "Projects"
+    pageRef = "/projects"
+    weight = 20
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 30
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["html", "rss"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html"]
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.parser]
+    # Lets a standalone image render as a <figure> instead of inside <p>.
+    wrapStandAloneImageWithinParagraph = false
+    [markup.goldmark.parser.attribute]
+      block = true
+  # Math is passed through untouched and rendered to KaTeX HTML at build time
+  # (layouts/_markup/render-passthrough.html). No client-side JavaScript.
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[imaging.webp]
+  quality = 88
+[imaging.jpeg]
+  quality = 88
+
+[services.rss]
+  limit = 20

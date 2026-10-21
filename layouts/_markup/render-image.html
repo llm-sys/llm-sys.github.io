@@ -1,0 +1,18 @@
+{{- /*
+  Markdown images. An image on its own line becomes a numbered <figure>,
+  with its title as the caption (Markdown and math allowed):
+
+    ![Alt text](overview.png "Caption text.")
+    {.wide}
+*/ -}}
+{{- $img := partial "img.html" (dict "page" .PageInner "src" .Destination "alt" .PlainText) -}}
+{{- if .IsBlock -}}
+<figure class="fig{{ with .Attributes.class }} {{ . }}{{ end }}"{{ with .Attributes.id }} id="{{ . }}"{{ end }}>
+  {{ $img }}
+  {{- with .Title }}
+  <figcaption>{{ . | $.PageInner.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- else -}}
+{{ $img }}
+{{- end -}}

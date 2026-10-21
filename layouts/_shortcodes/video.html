@@ -1,0 +1,35 @@
+{{- /*
+  Video: a local or remote file, YouTube, or Bilibili.
+
+    {{< video src="demo.mp4" poster="demo.jpg" caption="..." >}}
+    {{< video src="demo.mp4" autoplay=true ratio="32/9" >}}     silent loop, like a GIF
+    {{< video youtube="VIDEO_ID" caption="..." >}}
+    {{< video bilibili="BV1xx411c7mD" caption="..." >}}
+*/ -}}
+{{- $ratio := .Get "ratio" | default "16/9" -}}
+{{- $caption := .Get "caption" -}}
+{{- with .Inner }}{{ if strings.TrimSpace . }}{{ $caption = . }}{{ end }}{{ end -}}
+{{- $title := .Get "title" | default ($caption | plainify) | default "Video" -}}
+{{- $autoplay := eq (string (.Get "autoplay")) "true" -}}
+<figure class="video{{ with .Get "class" }} {{ . }}{{ end }}"{{ with .Get "id" }} id="{{ . }}"{{ end }}>
+  <div class="video__frame" style="--ratio: {{ $ratio }}">
+  {{- with .Get "youtube" }}
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" title="{{ $title }}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  {{- else }}{{ with .Get "bilibili" }}
+    <iframe src="https://player.bilibili.com/player.html?bvid={{ . }}&amp;autoplay=0&amp;high_quality=1&amp;danmaku=0" title="{{ $title }}" loading="lazy" allowfullscreen sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"></iframe>
+  {{- else }}
+    {{- $src := .Get "src" }}
+    {{- with $.Page.Resources.Get $src }}{{ $src = .RelPermalink }}{{ end }}
+    {{- $poster := .Get "poster" }}
+    {{- with $poster }}{{ with $.Page.Resources.Get . }}{{ $poster = .RelPermalink }}{{ end }}{{ end }}
+    <video {{ if $autoplay }}autoplay muted loop playsinline{{ else }}controls{{ end }} preload="{{ if $autoplay }}auto{{ else }}metadata{{ end }}"{{ with $poster }} poster="{{ . }}"{{ end }} title="{{ $title }}">
+      <source src="{{ $src }}"{{ if strings.HasSuffix $src ".webm" }} type="video/webm"{{ else if strings.HasSuffix $src ".mp4" }} type="video/mp4"{{ end }}>
+      <a href="{{ $src }}">Download the video</a>
+    </video>
+  {{- end }}{{ end }}
+  </div>
+  {{- with $caption }}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- /**/ -}}

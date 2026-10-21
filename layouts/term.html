@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="wrap">
+  <header class="page-head">
+    <p class="page-head__up"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <ul class="post-list">
+    {{- range .Pages }}
+    {{ partial "post-row.html" . }}
+    {{- end }}
+  </ul>
+</div>
+{{ end }}

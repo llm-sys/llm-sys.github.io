@@ -1,0 +1,6 @@
+# Listed on the home page (first four) and on /projects/.
+# post: optional path of the blog post that explains the project.
+- name: DoSA
+  repo: https://github.com/llm-sys/dosa-sglang
+  description: DoSA in SGLang. Certified screening for the sparse-attention indexer, with exact Top-K selection.
+  post: /blog/dosa

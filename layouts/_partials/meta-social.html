@@ -1,0 +1,40 @@
+{{- $p := .page }}
+{{- /* Social card: base artwork from assets/og/base.png with the page title set in Mona Sans. */}}
+{{- $font := resources.Get "og/mona-sans-display-expanded-bold.ttf" }}
+{{- $text := cond $p.IsPage $p.Title site.Params.tagline }}
+{{- $img := (resources.Get "og/base.png") | images.Filter
+  (images.Text $text (dict "color" "#141a16" "size" 64 "linespacing" 10 "x" 72 "y" 160 "font" $font))
+  (images.Text site.Title (dict "color" "#141a16" "size" 30 "x" 132 "y" 60 "font" $font)) }}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ if $p.IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ cond $p.IsHome site.Title $p.Title }}">
+<meta property="og:description" content="{{ .desc }}">
+<meta property="og:url" content="{{ $p.Permalink }}">
+<meta property="og:image" content="{{ $img.Permalink }}">
+<meta property="og:image:width" content="{{ $img.Width }}">
+<meta property="og:image:height" content="{{ $img.Height }}">
+<meta name="twitter:card" content="summary_large_image">
+{{- with site.Params.twitter }}
+<meta name="twitter:site" content="@{{ . }}">
+{{- end }}
+{{- if and $p.IsPage (eq $p.Section "blog") }}
+<meta property="article:published_time" content="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- /* Highwire Press tags, read by Google Scholar. */}}
+<meta name="citation_title" content="{{ $p.Title }}">
+{{- range $p.Params.authors }}
+<meta name="citation_author" content="{{ .name }}">
+{{- end }}
+<meta name="citation_publication_date" content="{{ $p.Date.Format "2006/01/02" }}">
+{{- with partial "arxiv-id.html" $p }}
+<meta name="citation_arxiv_id" content="{{ . }}">
+{{- end }}
+{{- range $p.Params.links }}
+{{- if eq .icon "pdf" }}
+{{- with $p.Resources.Get .url }}
+<meta name="citation_pdf_url" content="{{ .Permalink }}">
+{{- else }}
+<meta name="citation_pdf_url" content="{{ .url | absURL }}">
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}

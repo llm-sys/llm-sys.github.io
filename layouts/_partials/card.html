@@ -1,0 +1,36 @@
+{{- /*
+  The paper card: title, subtitle, authors, and links on a mint panel, closed
+  by the post's sparse-mask strip. Used as the post header (level 1) and as
+  the featured post on the home page (level 2).
+*/ -}}
+{{- $p := .page -}}
+{{- $lead := eq .level 1 -}}
+<div class="card">
+  {{- if not $lead }}
+  <p class="card__date"><time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "January 2, 2006" }}</time></p>
+  {{- end }}
+  {{- if $lead }}
+  <h1 class="card__title">{{ $p.Title }}</h1>
+  {{- else }}
+  <h2 class="card__title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h2>
+  {{- end }}
+  {{- with $p.Params.subtitle }}
+  <p class="card__sub">{{ . | $p.RenderString }}</p>
+  {{- end }}
+  {{- if $lead }}
+  {{ partial "authors.html" $p }}
+  {{- else }}
+  {{ partial "byline.html" $p }}
+  {{- end }}
+  {{- if or (not $lead) $p.Params.links }}
+  <div class="card__links">
+    {{- if not $lead }}
+    <a class="btn btn--primary" href="{{ $p.RelPermalink }}">Read the post</a>
+    {{- end }}
+    {{ partial "links.html" $p }}
+  </div>
+  {{- end }}
+  {{- if ne $p.Params.mask false }}
+  <div class="card__mask">{{ partial "mask.html" (dict "seed" $p.Title "rows" 5 "cols" 40 "accent" ($p.Params.accent | default "amber") "animate" (not $lead)) }}</div>
+  {{- end }}
+</div>

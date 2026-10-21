@@ -1,0 +1,9 @@
+{{- with .Params.authors -}}
+{{- $n := len . -}}
+<p class="byline">
+{{- range $i, $a := . -}}
+{{- if gt $i 0 -}}{{- if eq $i (sub $n 1) -}}{{ if gt $n 2 }},{{ end }} and {{ else }}, {{ end -}}{{- end -}}
+{{- $a.name -}}
+{{- end -}}
+</p>
+{{- end -}}

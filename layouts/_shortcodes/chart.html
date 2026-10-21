@@ -1,0 +1,50 @@
+{{- /*
+  An interactive chart drawn by assets/js/charts.js from a JSON spec in the
+  shortcode body. Each chart also renders a data table, so no value is
+  reachable only by hovering.
+
+    {{< chart caption="..." class="wide" >}}
+    { "type": "bars", "unit": "×", "categories": ["128K", "256K"],
+      "series": [{ "name": "SGLang", "values": [1, 1] }, { "name": "DoSA", "values": [1.19, 1.61] }] }
+    {{< /chart >}}
+
+  Types: "bars" (grouped columns) and "lines".
+  Spec keys: categories, series[{name, values}], unit, y (axis title),
+  yMin, yMax, highlight (series name to label at the ends), groups (bars only:
+  [{label, from, to}] to draw panel labels across category ranges).
+*/ -}}
+{{- $spec := strings.TrimSpace .Inner | transform.Unmarshal -}}
+{{- $id := printf "chart-%d" .Ordinal -}}
+{{- .Page.Store.Set "hasChart" true -}}
+<figure class="chart{{ with .Get "class" }} {{ . }}{{ end }}" id="{{ .Get "id" | default $id }}">
+  <div class="chart__plot" data-chart="{{ jsonify $spec }}" role="img" aria-label="{{ .Get "caption" | plainify }}"></div>
+  <details class="chart__table">
+    <summary>Show the data</summary>
+    <div class="tbl__scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ $spec.x | default "" }}</th>
+          {{- range $spec.series }}
+          <th style="text-align: right">{{ .name }}</th>
+          {{- end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{- range $i, $cat := $spec.categories }}
+        <tr>
+          <td>{{ $cat }}</td>
+          {{- range $spec.series }}
+          <td style="text-align: right">{{ index .values $i }}{{ $spec.unit }}</td>
+          {{- end }}
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+    </div>
+  </details>
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- /**/ -}}

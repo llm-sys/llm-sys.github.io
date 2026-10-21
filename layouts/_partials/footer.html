@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__about">
+      <a class="brand" href="{{ "/" | relURL }}"><span class="logo-tile">{{ partial "glyph.html" }}</span><span>{{ site.Title }}</span></a>
+      <p>{{ site.Params.description }}</p>
+    </div>
+    <nav class="site-footer__links" aria-label="Footer">
+      {{- range site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{- end }}
+      {{- with site.Params.github }}
+      <a href="{{ . }}">GitHub</a>
+      {{- end }}
+      {{- with site.Home.OutputFormats.Get "rss" }}
+      <a href="{{ .RelPermalink }}">RSS</a>
+      {{- end }}
+      {{- with site.Params.email }}
+      <a href="mailto:{{ . }}">Email</a>
+      {{- end }}
+    </nav>
+    <p class="site-footer__legal">© {{ now.Year }} {{ site.Copyright }}</p>
+  </div>
+</footer>

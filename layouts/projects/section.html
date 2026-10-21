@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="wrap">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}
+    <p>{{ . }}</p>
+    {{- end }}
+  </header>
+  {{- with .Content }}
+  <div class="prose prose--page">{{ . }}</div>
+  {{- end }}
+  {{- with hugo.Data.projects }}
+  {{ partial "projects.html" . }}
+  {{- end }}
+</div>
+{{ end }}

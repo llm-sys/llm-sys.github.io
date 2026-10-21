@@ -1,0 +1,34 @@
+{{- /*
+  Blockquotes, plus GitHub-style alerts used as callouts and theorem blocks:
+
+    > [!NOTE]
+    > [!TIP] Custom title
+    > [!THEOREM] Theorem 1 (Exact Top-$K$ selection)
+    > [!PROOF]-          (a trailing - makes it collapsed, + makes it open)
+*/ -}}
+{{- if eq .Type "alert" -}}
+  {{- $t := .AlertType -}}
+  {{- $defaults := dict
+    "note" "Note" "tip" "Tip" "important" "Important" "warning" "Warning" "caution" "Caution"
+    "summary" "Summary" "theorem" "Theorem" "proposition" "Proposition" "lemma" "Lemma"
+    "corollary" "Corollary" "definition" "Definition" "proof" "Proof" -}}
+  {{- $title := "" -}}
+  {{- with .AlertTitle }}{{ $title = . }}{{ else }}{{ $title = index $defaults $t | default (strings.FirstUpper $t) }}{{ end -}}
+  {{- $formal := in (slice "theorem" "proposition" "lemma" "corollary" "definition" "proof") $t -}}
+  {{- $class := printf "callout callout--%s%s" $t (cond $formal " callout--formal" "") -}}
+  {{- if .AlertSign -}}
+<details class="{{ $class }}"{{ if eq .AlertSign "+" }} open{{ end }}>
+  <summary class="callout__title">{{ $title }}</summary>
+  <div class="callout__body">{{ .Text }}</div>
+</details>
+  {{- else -}}
+<div class="{{ $class }}">
+  <p class="callout__title">{{ $title }}</p>
+  <div class="callout__body">{{ .Text }}</div>
+</div>
+  {{- end -}}
+{{- else -}}
+<blockquote{{ with .Attributes.class }} class="{{ . }}"{{ end }}>
+  {{ .Text }}
+</blockquote>
+{{- end -}}

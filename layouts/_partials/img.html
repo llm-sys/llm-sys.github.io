@@ -1,0 +1,28 @@
+{{- /*
+  Responsive <img> for a page or global resource. Raster images get WebP
+  variants at up to three widths; SVG and remote images pass through.
+  Usage: partial "img.html" (dict "page" .Page "src" "fig.png" "alt" "...")
+*/ -}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $u := urls.Parse $src -}}
+{{- $res := "" -}}
+{{- if not $u.IsAbs -}}
+  {{- $res = or (.page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
+{{- end -}}
+{{- with $res -}}
+  {{- if and (eq .ResourceType "image") (in (slice "png" "jpeg" "jpg" "webp") .MediaType.SubType) -}}
+    {{- $set := slice -}}
+    {{- range slice 800 1280 1920 -}}
+      {{- if le . $res.Width -}}
+        {{- $v := $res.Resize (printf "%dx webp q88" .) -}}
+        {{- $set = $set | append (printf "%s %dw" $v.RelPermalink .) -}}
+      {{- end -}}
+    {{- end -}}
+    <img src="{{ .RelPermalink }}"{{ with $set }} srcset="{{ delimit . ", " }}" sizes="(min-width: 72rem) 60rem, 100vw"{{ end }} width="{{ .Width }}" height="{{ .Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- else -}}
+    <img src="{{ .RelPermalink }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- end -}}
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+{{- end -}}

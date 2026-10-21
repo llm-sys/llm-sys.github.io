@@ -1,0 +1,14 @@
+<ul class="projects">
+{{- range . }}
+  <li class="project">
+    <h3 class="project__name"><a href="{{ .repo }}">{{ .name }}</a></h3>
+    <p class="project__desc">{{ .description }}</p>
+    <p class="project__links">
+      <a href="{{ .repo }}">{{ partial "icon.html" "github" }}<span>{{ strings.TrimPrefix "https://github.com/" .repo }}</span></a>
+      {{- with .post }}{{ with site.GetPage . }}
+      <a href="{{ .RelPermalink }}">Read the post</a>
+      {{- end }}{{ end }}
+    </p>
+  </li>
+{{- end }}
+</ul>

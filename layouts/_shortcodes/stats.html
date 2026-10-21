@@ -1,0 +1,26 @@
+{{- /*
+  A row of headline numbers.
+
+    {{< stats >}}
+    2.74× | Indexer speedup over SGLang | up to, across 60 prefill configurations
+    1.94× | Time-to-first-token speedup | DeepSeek-V3.2 at ~1M tokens
+    {{< /stats >}}
+
+  One stat per line: value | label | note (note optional).
+*/ -}}
+<div class="stats{{ with .Get "class" }} {{ . }}{{ end }}">
+{{- range split (strings.TrimSpace .Inner) "\n" }}
+  {{- $line := strings.TrimSpace . }}
+  {{- if $line }}
+  {{- $f := split $line "|" }}
+  <div class="stat">
+    <p class="stat__value" data-count>{{ strings.TrimSpace (index $f 0) }}</p>
+    <p class="stat__label">{{ strings.TrimSpace (index $f 1) | $.Page.RenderString }}</p>
+    {{- if gt (len $f) 2 }}
+    <p class="stat__note">{{ strings.TrimSpace (index $f 2) | $.Page.RenderString }}</p>
+    {{- end }}
+  </div>
+  {{- end }}
+{{- end }}
+</div>
+{{- /**/ -}}

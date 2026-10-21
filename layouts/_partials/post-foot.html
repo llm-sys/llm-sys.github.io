@@ -1,0 +1,13 @@
+<footer class="post-foot">
+  {{- with .GetTerms "tags" }}
+  <ul class="tags" aria-label="Tags">
+    {{- range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  <div class="share">
+    <button class="btn btn--quiet" type="button" data-share="{{ .Permalink }}">{{ partial "icon.html" "link" }}<span>Copy link</span></button>
+    <a class="btn btn--quiet" href="https://x.com/intent/post?url={{ .Permalink | urlquery }}&amp;text={{ .Title | urlquery }}">{{ partial "icon.html" "x" }}<span>Share on X</span></a>
+  </div>
+</footer>

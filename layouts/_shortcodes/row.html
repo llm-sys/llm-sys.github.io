@@ -1,0 +1,17 @@
+{{- /*
+  Side-by-side sub-figures sharing one numbered caption.
+
+    {{< row caption="Time to first token on (a) GLM-5.2 and (b) DeepSeek-V3.2." class="wide" >}}
+    {{< figure src="a.png" caption="(a) GLM-5.2" >}}
+    {{< figure src="b.png" caption="(b) DeepSeek-V3.2" >}}
+    {{< /row >}}
+*/ -}}
+<figure class="row{{ with .Get "class" }} {{ . }}{{ end }}"{{ with .Get "id" }} id="{{ . }}"{{ end }}>
+  <div class="row__items"{{ with .Get "cols" }} style="--cols: {{ . }}"{{ end }}>
+    {{ .Inner }}
+  </div>
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- /**/ -}}

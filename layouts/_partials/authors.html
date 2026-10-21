@@ -1,0 +1,30 @@
+{{- with .Params.authors }}
+<p class="authors">
+{{- $n := len . }}
+{{- range $i, $a := . }}
+{{- $sup := slice }}
+{{- range $a.affil }}{{ $sup = $sup | append (string .) }}{{ end }}
+{{- range $a.marks }}{{ $sup = $sup | append . }}{{ end }}
+<span class="author">
+{{- with $a.url }}<a href="{{ . }}">{{ $a.name }}</a>{{ else }}{{ $a.name }}{{ end -}}
+{{- with $sup }}<sup>{{ delimit . "," }}</sup>{{ end -}}
+{{- if lt $i (sub $n 1) }},{{ end -}}
+</span>
+{{- end }}
+</p>
+{{- end }}
+{{- with .Params.affiliations }}
+{{- $multi := gt (len .) 1 }}
+<p class="affils">
+{{- range $i, $af := . }}
+<span>{{ if or $multi $.Params.authors }}<sup>{{ add $i 1 }}</sup>{{ end }}{{ $af }}</span>
+{{- end }}
+</p>
+{{- end }}
+{{- with .Params.notes }}
+<p class="author-notes">
+{{- range . }}
+<span>{{ with .mark }}<sup>{{ . }}</sup>{{ end }}{{ .text }}</span>
+{{- end }}
+</p>
+{{- end }}

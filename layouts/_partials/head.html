@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+{{- $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) }}
+{{- $desc := site.Params.description }}
+{{- if not .IsHome }}{{ $desc = .Description | default .Params.subtitle | default .Summary | default site.Params.description | plainify | htmlUnescape | truncate 220 }}{{ end }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- with site.Home.OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="preload" href="{{ "fonts/mona-sans.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/newsreader.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{- $css := slice
+  (resources.Get "css/fonts.css")
+  (resources.Get "css/site.css")
+  (resources.Get "css/prose.css")
+  (resources.Get "css/chroma.css")
+  | resources.Concat "css/site.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- /* Render the content first so the math hook can flag pages that need KaTeX styles. */}}
+{{- $noop := .Content }}
+{{- if .Store.Get "hasMath" }}
+{{- $katex := resources.Get "css/katex.css" | resources.Copy "css/katex.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $katex.RelPermalink }}" integrity="{{ $katex.Data.Integrity }}">
+{{- end }}
+{{- if .Params.noindex }}
+<meta name="robots" content="noindex">
+{{- end }}
+{{ partial "meta-social.html" (dict "page" . "desc" $desc) }}

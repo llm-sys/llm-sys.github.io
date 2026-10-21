@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="wrap">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}
+    <p>{{ . }}</p>
+    {{- end }}
+  </header>
+  {{- with .Pages }}
+  <ul class="post-list">
+    {{- range . }}
+    {{ partial "post-row.html" . }}
+    {{- end }}
+  </ul>
+  {{- else }}
+  <p class="empty">No posts yet.</p>
+  {{- end }}
+</div>
+{{ end }}

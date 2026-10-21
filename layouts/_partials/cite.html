@@ -1,0 +1,47 @@
+{{- /*
+  Citation block: a plain-text reference and BibTeX. In order of priority:
+    1. `bibtex` in front matter, used verbatim;
+    2. `arxiv` in front matter, cited as the arXiv entry;
+    3. otherwise the blog post itself.
+*/ -}}
+{{- $names := slice }}
+{{- range .Params.authors }}{{ $names = $names | append .name }}{{ end }}
+{{- with $names }}
+{{- $authors := delimit . " and " }}
+{{- $parts := split (index . 0) " " }}
+{{- $last := index $parts (sub (len $parts) 1) | lower }}
+{{- $word := index (split ($.Title | lower | replaceRE `[^a-z0-9 ]` "") " ") 0 }}
+{{- $arxiv := partial "arxiv-id.html" $ }}
+{{- $year := $.Date.Format "2006" }}
+{{- /* New-style arXiv IDs start with YYMM. */}}
+{{- if findRE `^\d{4}\.\d{4,5}$` $arxiv }}{{ $year = printf "20%s" (substr $arxiv 0 2) }}{{ end }}
+{{- $key := $.Params.citekey | default (printf "%s%s%s" $last $year $word) }}
+{{- $bib := "" }}
+{{- if $.Params.bibtex }}
+  {{- $bib = $.Params.bibtex }}
+{{- else if $arxiv }}
+  {{- $lines := slice
+    (printf "  title         = {%s}," $.Title)
+    (printf "  author        = {%s}," $authors)
+    (printf "  year          = {%s}," $year)
+    (printf "  eprint        = {%s}," $arxiv)
+    "  archivePrefix = {arXiv}," }}
+  {{- with $.Params.arxiv_class }}{{ $lines = $lines | append (printf "  primaryClass  = {%s}," .) }}{{ end }}
+  {{- $lines = $lines | append (printf "  url           = {https://arxiv.org/abs/%s}" $arxiv) }}
+  {{- $bib = printf "@misc{%s,\n%s\n}" $key (delimit $lines "\n") }}
+{{- else }}
+  {{- $bib = printf "@misc{%s,\n  title        = {%s},\n  author       = {%s},\n  year         = {%s},\n  month        = %s,\n  howpublished = {\\url{%s}},\n  note         = {%s blog}\n}" $key $.Title $authors $year (lower ($.Date.Format "Jan")) $.Permalink site.Title }}
+{{- end }}
+<section class="cite" id="citation">
+  <h2>Citation</h2>
+  {{- if $arxiv }}
+  <p class="cite__text">{{ $authors }}. “{{ $.Title }}.” arXiv:{{ $arxiv }}, {{ $year }}. <a href="https://arxiv.org/abs/{{ $arxiv }}">https://arxiv.org/abs/{{ $arxiv }}</a></p>
+  {{- else }}
+  <p class="cite__text">{{ $authors }}. “{{ $.Title }}.” {{ site.Title }} blog, {{ $.Date.Format "January 2006" }}. <a href="{{ $.Permalink }}">{{ $.Permalink }}</a></p>
+  {{- end }}
+  <div class="code">
+    <div class="code__bar"><span class="code__label">BibTeX</span><button class="code__copy" type="button" data-copy>Copy</button></div>
+    {{ transform.Highlight (trim $bib "\n") "bibtex" }}
+  </div>
+</section>
+{{- end }}

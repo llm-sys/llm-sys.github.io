@@ -1,0 +1,19 @@
+{{- /*
+  A figure with a longer caption than the Markdown image title allows.
+
+    {{< figure src="overview.png" alt="..." class="wide" >}}
+    Caption with **Markdown** and $math$.
+    {{< /figure >}}
+
+  Or self-closing with caption="...". Inside {{< row >}} it becomes an
+  unnumbered sub-figure.
+*/ -}}
+{{- $caption := .Get "caption" -}}
+{{- with .Inner }}{{ if strings.TrimSpace . }}{{ $caption = . }}{{ end }}{{ end -}}
+<figure class="fig{{ with .Get "class" }} {{ . }}{{ end }}"{{ with .Get "id" }} id="{{ . }}"{{ end }}>
+  {{ partial "img.html" (dict "page" .Page "src" (.Get "src") "alt" (.Get "alt" | default (.Get "caption") | plainify)) }}
+  {{- with $caption }}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- /**/ -}}

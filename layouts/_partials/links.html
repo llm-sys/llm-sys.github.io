@@ -1,0 +1,27 @@
+{{- /*
+  Paper / code / data buttons from the `links` front matter list. When the
+  post has an `arxiv` ID and no arXiv link of its own, an arXiv button is
+  added after the PDF link (or first, if there is no PDF link).
+*/ -}}
+{{- $p := . -}}
+{{- $arxiv := partial "arxiv-id.html" $p -}}
+{{- $hasPdf := false -}}
+{{- range .Params.links }}
+  {{- if eq .icon "arxiv" }}{{ $arxiv = "" }}{{ end }}
+  {{- if eq .icon "pdf" }}{{ $hasPdf = true }}{{ end }}
+{{- end -}}
+{{- define "partials/inline/arxiv-btn.html" -}}
+<a class="btn" href="https://arxiv.org/abs/{{ . }}">{{ partial "icon.html" "arxiv" }}<span>arXiv</span></a>
+{{- end -}}
+{{- if and $arxiv (not $hasPdf) }}
+{{ partial "inline/arxiv-btn.html" $arxiv }}
+{{- end }}
+{{- range .Params.links }}
+{{- $url := .url }}
+{{- with $p.Resources.Get .url }}{{ $url = .RelPermalink }}{{ end }}
+<a class="btn" href="{{ $url }}">{{ partial "icon.html" (.icon | default "external") }}<span>{{ .label }}</span></a>
+{{- if and $arxiv (eq .icon "pdf") }}
+{{ partial "inline/arxiv-btn.html" $arxiv }}
+{{- $arxiv = "" }}
+{{- end }}
+{{- end }}

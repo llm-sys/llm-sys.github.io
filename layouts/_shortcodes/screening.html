@@ -1,0 +1,31 @@
+{{- /*
+  DoSA's screening pass, as an interactive figure. Each row is one key; the
+  bar is its certified upper bound U, the tick is its true score s. Moving
+  the threshold shows which keys the certificate rejects without scoring.
+  Data are illustrative and generated deterministically at build time.
+
+    {{< screening caption="..." >}}
+*/ -}}
+{{- .Page.Store.Set "hasChart" true -}}
+<figure class="screen{{ with .Get "class" }} {{ . }}{{ end }}" id="{{ .Get "id" | default "screening" }}">
+  <div class="screen__panel" data-screening>
+    <div class="screen__head">
+      <p class="screen__readout"><strong data-kept>0</strong> of <span data-total>0</span> keys need a full score</p>
+      <label class="screen__control">
+        <span>Threshold τ</span>
+        <input type="range" min="0" max="100" value="62" data-tau aria-describedby="screen-help">
+      </label>
+    </div>
+    <svg class="screen__svg" aria-hidden="true"></svg>
+    <ul class="screen__legend">
+      <li><i class="k k--bound"></i>Upper bound U, computed from a few heads</li>
+      <li><i class="k k--score"></i>True score s, computed only if U ≥ τ</li>
+      <li><i class="k k--tau"></i>Threshold τ from the seed keys</li>
+    </ul>
+    <p class="screen__help" id="screen-help">Drag the threshold. Keys whose bound falls below it are rejected without ever being fully scored, and the Top-K result does not change.</p>
+  </div>
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- /**/ -}}

@@ -1,0 +1,28 @@
+{{- /*
+  Fenced code blocks.
+    ```python {file="indexer.py" linenos=true hl_lines="3-4"}
+  `file` (or `title`) replaces the language label in the bar.
+  ```mermaid blocks are rendered client-side; the script loads only on pages that use one.
+*/ -}}
+{{- if eq .Type "mermaid" -}}
+<pre class="mermaid">{{ .Inner }}</pre>
+{{- .Page.Store.Set "hasMermaid" true -}}
+{{- else -}}
+{{- $names := dict
+  "py" "Python" "python" "Python" "cuda" "CUDA" "cu" "CUDA" "cpp" "C++" "c++" "C++" "c" "C"
+  "bash" "Shell" "sh" "Shell" "shell" "Shell" "zsh" "Shell" "console" "Terminal"
+  "js" "JavaScript" "javascript" "JavaScript" "ts" "TypeScript" "json" "JSON"
+  "yaml" "YAML" "yml" "YAML" "toml" "TOML" "rust" "Rust" "go" "Go"
+  "bibtex" "BibTeX" "bib" "BibTeX" "tex" "LaTeX" "latex" "LaTeX" "diff" "Diff"
+  "triton" "Triton" "ptx" "PTX" "mlir" "MLIR" "md" "Markdown" "markdown" "Markdown" -}}
+{{- $lang := .Type | default "text" -}}
+{{- $label := or .Attributes.file .Attributes.title (index $names (lower $lang)) -}}
+{{- $hlLang := cond (in (slice "cuda" "cu" "triton") (lower $lang)) (cond (eq (lower $lang) "triton") "python" "cpp") $lang -}}
+<div class="code">
+  <div class="code__bar">
+    {{- with $label }}<span class="code__label{{ if or $.Attributes.file $.Attributes.title }} code__label--file{{ end }}">{{ . }}</span>{{ end -}}
+    <button class="code__copy" type="button" data-copy>Copy</button>
+  </div>
+  {{ transform.Highlight .Inner $hlLang .Options }}
+</div>
+{{- end -}}

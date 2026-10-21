@@ -1,0 +1,38 @@
+{{- /*
+  A tile pattern, generated deterministically from a seed string (usually
+  the post title), so every post gets its own. Kept as decoration only: it
+  carries no meaning tied to any research topic.
+
+  Rows fill left to right, each a little longer than the last, which gives
+  the strip its stepped right edge. Brand cells form a few seeded columns
+  and the end of each row; accent cells are scattered.
+
+  Usage:
+    partial "mask.html" (dict "seed" .Title "rows" 12)
+    partial "mask.html" (dict "seed" .Title "rows" 5 "cols" 40 "accent" "coral" "animate" true)
+*/ -}}
+{{- $seed := hash.FNV32a (.seed | default "llm-sys") -}}
+{{- $rows := .rows | default 12 -}}
+{{- $cols := .cols | default $rows -}}
+{{- $off := sub $cols $rows -}}
+{{- $step := 12 -}}
+{{- $s := 10 -}}
+{{- $span := sub $cols 3 -}}
+{{- $heavy := slice 0 (add 1 (mod $seed $span)) (add 1 (mod (div $seed 97) $span)) (add 1 (mod (div $seed 9973) $span)) -}}
+{{- $animate := .animate -}}
+<svg class="mask{{ if $animate }} mask--animate{{ end }}" viewBox="0 0 {{ sub (mul $cols $step) 2 }} {{ sub (mul $rows $step) 2 }}" style="--m-accent: var(--{{ .accent | default "amber" }})" aria-hidden="true" focusable="false">
+{{- range $r := seq 0 (sub $rows 1) }}
+{{- $last := add $off $r }}
+{{- range $c := seq 0 $last }}
+{{- $v := mod (hash.FNV32a (printf "%d/%d/%d" $seed $r $c)) 1000 -}}
+{{- $k := "p" -}}
+{{- if eq $c $last -}}{{- $k = "s" -}}
+{{- else if and (ge $c (sub $last 2)) (lt $v 600) -}}{{- $k = "s" -}}
+{{- else if and (in $heavy $c) (lt $v 780) -}}{{- $k = "s" -}}
+{{- else if lt $v 45 -}}{{- $k = "s" -}}
+{{- else if lt $v 200 -}}{{- $k = "v" -}}
+{{- end }}
+<rect class="m-{{ $k }}" x="{{ mul $c $step }}" y="{{ mul $r $step }}" width="{{ $s }}" height="{{ $s }}" rx="2"{{ if $animate }} style="--c:{{ $c }}"{{ end }}/>
+{{- end }}
+{{- end }}
+</svg>

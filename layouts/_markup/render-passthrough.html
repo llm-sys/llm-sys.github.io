@@ -1,0 +1,10 @@
+{{- /* Math rendered to KaTeX HTML at build time; the page loads only katex.min.css. */ -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") "throwOnError" false -}}
+{{- with try (transform.ToMath .Inner $opts) -}}
+  {{- with .Err -}}
+    {{- errorf "Unable to render math %q in %s: %s" $.Inner $.Position . -}}
+  {{- else -}}
+    {{- .Value -}}
+    {{- $.Page.Store.Set "hasMath" true -}}
+  {{- end -}}
+{{- end -}}

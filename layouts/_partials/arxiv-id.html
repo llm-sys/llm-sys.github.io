@@ -1,0 +1,13 @@
+{{- /*
+  The post's arXiv ID from front matter, normalized: accepts "2610.13990",
+  "arXiv:2610.13990", or an abs/pdf URL, and drops any version suffix.
+  Returns "" when the post has no arXiv entry.
+*/ -}}
+{{- $id := "" -}}
+{{- with .Params.arxiv -}}
+  {{- if ne (printf "%T" .) "string" -}}
+    {{- errorf "%s: quote the arxiv ID, e.g. arxiv: \"2610.13990\" (unquoted, YAML reads it as a number and drops trailing zeros)" $.File.Path -}}
+  {{- end -}}
+  {{- $id = . | replaceRE `^(https?://arxiv\.org/(abs|pdf)/|arXiv:)` "" | replaceRE `(v\d+)?(\.pdf)?/?$` "" -}}
+{{- end -}}
+{{- return $id -}}

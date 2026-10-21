@@ -1,0 +1,11 @@
+<li class="post-row">
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  <div class="post-row__main">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{- with .Params.subtitle | default .Description }}
+    <p>{{ . | plainify }}</p>
+    {{- end }}
+    {{ partial "byline.html" . }}
+  </div>
+  <a class="post-row__art" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">{{ partial "mask.html" (dict "seed" .Title "rows" 6 "cols" 14 "accent" (.Params.accent | default "amber")) }}</a>
+</li>

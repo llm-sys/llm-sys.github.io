@@ -1,0 +1,37 @@
+/* Self-hosted fonts, SIL Open Font License 1.1. See static/fonts/LICENSE.md.
+   Paths are relative to the built stylesheet at /css/. */
+
+/* Mona Sans: headings and interface. Width 100–125%, weight 400–800, optical size. */
+@font-face {
+  font-family: "Mona Sans";
+  src: url(../fonts/mona-sans.woff2) format("woff2");
+  font-weight: 400 800;
+  font-stretch: 100% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Newsreader: long-form text. Weight 380–700, optical size 6–72. */
+@font-face {
+  font-family: "Newsreader";
+  src: url(../fonts/newsreader.woff2) format("woff2");
+  font-weight: 380 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url(../fonts/newsreader-italic.woff2) format("woff2");
+  font-weight: 380 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Mona Sans Mono: code. */
+@font-face {
+  font-family: "Mona Sans Mono";
+  src: url(../fonts/mona-sans-mono.woff2) format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}

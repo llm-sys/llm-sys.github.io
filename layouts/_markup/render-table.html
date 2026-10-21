@@ -1,0 +1,35 @@
+{{- /*
+  Markdown tables, booktabs style, with an optional numbered caption:
+
+    | Method | Speedup |
+    | --- | ---: |
+    | Ours | **2.74×** |
+    {caption="Indexer speedup at 1M tokens." .wide}
+*/ -}}
+<figure class="tbl{{ with .Attributes.class }} {{ . }}{{ end }}"{{ with .Attributes.id }} id="{{ . }}"{{ end }}>
+  {{- with .Attributes.caption }}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end }}
+  <div class="tbl__scroll">
+  <table>
+    <thead>
+      {{- range .THead }}
+      <tr>
+        {{- range . }}
+        <th{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</th>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </thead>
+    <tbody>
+      {{- range .TBody }}
+      <tr>
+        {{- range . }}
+        <td{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</td>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </tbody>
+  </table>
+  </div>
+</figure>

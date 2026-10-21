@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ "/" | relURL }}"><span class="logo-tile">{{ partial "glyph.html" }}</span><span>{{ site.Title }}</span></a>
+    <nav class="nav" aria-label="Main">
+      {{- $cur := . }}
+      {{- range site.Menus.main }}
+      <a href="{{ .URL }}"{{ if or ($cur.IsMenuCurrent "main" .) ($cur.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+      {{- with site.Params.github }}
+      <a class="nav__icon" href="{{ . }}" aria-label="GitHub">{{ partial "icon.html" "github" }}</a>
+      {{- end }}
+    </nav>
+  </div>
+</header>
