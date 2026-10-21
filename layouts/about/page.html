@@ -1,0 +1,48 @@
+{{ define "main" }}
+<div class="wrap about">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{- with .Content }}
+  <div class="prose about__lead">{{ . }}</div>
+  {{- end }}
+
+  {{- with hugo.Data.people }}
+  <section class="about-sec" aria-labelledby="people">
+    <h2 class="about-sec__title" id="people">People</h2>
+    <ul class="people">
+      {{- range . }}
+      <li class="person" id="{{ .name | urlize }}">
+        <div class="person__id">
+          {{- with .photo }}{{ with resources.Get . }}
+          {{- $img := .Fill "288x288 Center webp q85" }}
+          <img class="person__photo" src="{{ $img.RelPermalink }}" width="144" height="144" alt="" loading="lazy" decoding="async">
+          {{- end }}{{ end }}
+          <h3 class="person__name">{{ .name }}</h3>
+          {{- with .role }}
+          <p class="person__role">{{ . }}</p>
+          {{- end }}
+        </div>
+        <div class="prose person__bio">{{ .bio | $.RenderString (dict "display" "block") }}</div>
+        {{- with .links }}
+        <ul class="person__links" aria-label="Links">
+          {{- range . }}
+          <li><a href="{{ .url }}">{{ partial "icon.html" (.icon | default "link") }}<span>{{ .label }}</span></a></li>
+          {{- end }}
+        </ul>
+        {{- end }}
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  {{- with .Params.contact }}
+  <section class="about-sec" aria-labelledby="contact">
+    <h2 class="about-sec__title" id="contact">Contact</h2>
+    <div class="prose about__text">{{ . | $.RenderString (dict "display" "block") }}</div>
+  </section>
+  {{- end }}
+</div>
+{{ end }}

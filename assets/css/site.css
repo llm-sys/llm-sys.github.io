@@ -697,3 +697,82 @@ a { color: var(--ink); }
   transform-origin: 0 50%;
   pointer-events: none;
 }
+
+/* --------------------------------------------------------------------------
+   About
+   -------------------------------------------------------------------------- */
+
+.about__lead { max-width: var(--text); }
+.about__lead p:first-child { font-size: 1.375rem; line-height: 1.5; color: var(--ink); }
+
+.about-sec { margin-top: clamp(3.5rem, 8vw, 5.5rem); }
+.about-sec__title {
+  margin: 0 0 1.25rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+  font-stretch: 112%;
+  letter-spacing: -.012em;
+}
+
+.people { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
+.person {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, var(--text));
+  gap: 1rem 4rem;
+  padding: 2.25rem 0 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 1.5rem;
+}
+.person__id { grid-row: 1 / span 2; }
+.person__photo {
+  display: block;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-bottom: 1.125rem;
+  border-radius: 1.25rem;
+  object-fit: cover;
+  background: var(--panel);
+}
+.person__name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-stretch: 112%;
+  line-height: 1.15;
+  letter-spacing: -.014em;
+}
+.person__role { margin: .5rem 0 0; color: var(--ink-2); font-size: .9375rem; line-height: 1.4; }
+.person__bio { font-size: 1.1875rem; line-height: 1.6; }
+.person__bio > * + * { margin-top: .875rem; }
+.person__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: .5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.person__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .4375rem;
+  min-height: 2.25rem;
+  padding: .375rem .75rem;
+  border: 1px solid var(--rule-2);
+  border-radius: .5625rem;
+  color: var(--ink);
+  font-size: .875rem;
+  font-weight: 560;
+  text-decoration: none;
+  transition: border-color .15s, background-color .15s;
+}
+.person__links a:hover { border-color: var(--ink); background: var(--panel); }
+.person__links svg { width: .9375rem; height: .9375rem; flex: none; }
+
+.about__text { max-width: var(--text); font-size: 1.1875rem; line-height: 1.6; }
+
+@media (max-width: 56rem) {
+  .person { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.75rem 0 2rem; }
+  .person__id { grid-row: auto; }
+  .person__photo { width: 5.5rem; height: 5.5rem; border-radius: 1rem; }
+}

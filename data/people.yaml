@@ -1,0 +1,24 @@
+# People on the About page, in display order.
+#   role:  one line under the name
+#   bio:   Markdown; links to posts can use their path, e.g. /blog/dosa/
+#   links: label, url, and icon (home, scholar, github, or link)
+#   photo: optional; an image under assets/, e.g. people/taosong.jpg
+- name: Taosong Fang
+  role: Researcher, Dots Studio, Xiaohongshu
+  bio: |
+    Taosong Fang is a researcher at Dots Studio, Xiaohongshu, working on LLM pretraining and on co-designing model backbones with the infrastructure that trains and serves them. Taosong's research interests are broad: earlier work spans LLM post-training and machine learning systems for LLM training, inference, and agentic workflows.
+
+    Taosong received a master's degree in 2026 from the Chinese Information Processing Laboratory, Institute of Software, Chinese Academy of Sciences, and a bachelor's degree in 2023 from the School of Software, Dalian University of Technology.
+  links:
+    - { label: Homepage, url: "https://fangtaosong.github.io/", icon: home }
+    - { label: Google Scholar, url: "https://scholar.google.com/citations?user=afuLXSMAAAAJ", icon: scholar }
+    - { label: GitHub, url: "https://github.com/fangtaosong", icon: github }
+
+- name: Fanxu Meng
+  role: Researcher, Dots Studio, Xiaohongshu
+  bio: |
+    Fanxu Meng is a researcher at Dots Studio, Xiaohongshu, and holds a Ph.D. from Peking University. He has authored several first-author papers at leading conferences such as NeurIPS and ICML, including [PiSSA](https://arxiv.org/abs/2404.02948) and [TransMLA](https://arxiv.org/abs/2502.07864). His current research focuses on efficient sparse attention, with representative works including [HISA](https://arxiv.org/abs/2603.28458), ResMISA, and [DoSA](/blog/dosa/).
+  links:
+    - { label: Homepage, url: "https://fxmeng.github.io/", icon: home }
+    - { label: Google Scholar, url: "https://scholar.google.com/citations?user=xvfuhRUAAAAJ", icon: scholar }
+    - { label: GitHub, url: "https://github.com/fxmeng", icon: github }

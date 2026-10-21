@@ -79,7 +79,8 @@ The newest post becomes the featured card on the home page automatically. Older 
 | Site name, home headline, intro, GitHub, email | `hugo.toml`, `[params]` |
 | Top navigation | `hugo.toml`, `[menus]` |
 | Open-source projects (home page and /projects/) | `data/projects.yaml` |
-| About page | `content/about/index.md` |
+| About page intro and contact | `content/about/index.md` |
+| People on the About page (bios, links, optional photo) | `data/people.yaml` |
 | Colors, spacing, type | `assets/css/site.css` (the `:root` block at the top) |
 | Post typography and components | `assets/css/prose.css` |
 | Logo | `layouts/_partials/glyph.html`, `static/favicon.svg`, `static/brand/` |
