@@ -6,9 +6,7 @@
 - name: Taosong Fang
   role: Researcher, Dots Studio, Xiaohongshu
   bio: |
-    Taosong Fang is a researcher at Dots Studio, Xiaohongshu, working on LLM pretraining and on co-designing model backbones with the infrastructure that trains and serves them. Taosong's research interests are broad: earlier work spans LLM post-training and machine learning systems for LLM training, inference, and agentic workflows.
-
-    Taosong received a master's degree in 2026 from the Chinese Information Processing Laboratory, Institute of Software, Chinese Academy of Sciences, and a bachelor's degree in 2023 from the School of Software, Dalian University of Technology.
+    Taosong Fang is a researcher at Dots Studio, Xiaohongshu, working on LLM pretraining and on co-designing model backbones with the infrastructure that trains and serves them. Taosong's research interests are broad: earlier work spans LLM post-training and machine learning systems for LLM training, inference, and agentic workflows. Taosong received a master's degree from the Institute of Software, Chinese Academy of Sciences, in 2026.
   links:
     - { label: Homepage, url: "https://fangtaosong.github.io/", icon: home }
     - { label: Google Scholar, url: "https://scholar.google.com/citations?user=afuLXSMAAAAJ", icon: scholar }
