@@ -7,7 +7,9 @@
 {{- $names := slice }}
 {{- range .Params.authors }}{{ $names = $names | append .name }}{{ end }}
 {{- with $names }}
+{{- /* BibTeX joins authors with " and "; the prose line reads as a sentence. */}}
 {{- $authors := delimit . " and " }}
+{{- $prose := cond (eq (len .) 2) (delimit . " and ") (delimit . ", " ", and ") }}
 {{- $parts := split (index . 0) " " }}
 {{- $last := index $parts (sub (len $parts) 1) | lower }}
 {{- $word := index (split ($.Title | lower | replaceRE `[^a-z0-9 ]` "") " ") 0 }}
@@ -35,9 +37,9 @@
 <section class="cite" id="citation">
   <h2>Citation</h2>
   {{- if $arxiv }}
-  <p class="cite__text">{{ $authors }}. “{{ $.Title }}.” arXiv:{{ $arxiv }}, {{ $year }}. <a href="https://arxiv.org/abs/{{ $arxiv }}">https://arxiv.org/abs/{{ $arxiv }}</a></p>
+  <p class="cite__text">{{ $prose }}. “{{ $.Title }}.” arXiv:{{ $arxiv }}, {{ $year }}. <a href="https://arxiv.org/abs/{{ $arxiv }}">https://arxiv.org/abs/{{ $arxiv }}</a></p>
   {{- else }}
-  <p class="cite__text">{{ $authors }}. “{{ $.Title }}.” {{ site.Title }} blog, {{ $.Date.Format "January 2006" }}. <a href="{{ $.Permalink }}">{{ $.Permalink }}</a></p>
+  <p class="cite__text">{{ $prose }}. “{{ $.Title }}.” {{ site.Title }} blog, {{ $.Date.Format "January 2006" }}. <a href="{{ $.Permalink }}">{{ $.Permalink }}</a></p>
   {{- end }}
   <div class="code">
     <div class="code__bar"><span class="code__label">BibTeX</span><button class="code__copy" type="button" data-copy>Copy</button></div>

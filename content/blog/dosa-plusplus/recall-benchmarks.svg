@@ -1,0 +1,2239 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="473.605031pt" height="195.38pt" viewBox="0 0 473.605031 195.38" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28T01:57:17.004885</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 195.38 
+L 473.605031 195.38 
+L 473.605031 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.136531 161.162 
+L 236.513122 161.162 
+L 236.513122 53.074 
+L 40.136531 53.074 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m05abdd3196" d="M 0 0 
+L 0 3 
+" style="stroke: #7b857e; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m05abdd3196" x="49.06274" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 4K -->
+      <g style="fill: #7b857e" transform="translate(44.031131 176.164) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-20e" d="M 2330 1120 
+L 154 1120 
+L 154 1581 
+L 2234 4672 
+L 2912 4672 
+L 2912 1606 
+L 3731 1606 
+L 3731 1120 
+L 2912 1120 
+L 2912 0 
+L 2330 0 
+L 2330 1120 
+z
+M 2330 1606 
+L 2330 4006 
+L 736 1606 
+L 2330 1606 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-52" d="M 1875 2291 
+L 1062 1427 
+L 1062 0 
+L 461 0 
+L 461 4666 
+L 1062 4666 
+L 1062 2157 
+L 3341 4666 
+L 4077 4666 
+L 2285 2726 
+L 4115 0 
+L 3398 0 
+L 1875 2291 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-20e" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-52" transform="translate(63.3125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m05abdd3196" x="84.767575" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 8K -->
+      <g style="fill: #7b857e" transform="translate(79.7707 176.164) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-212" d="M 1888 -64 
+Q 1395 -64 1027 99 
+Q 659 262 460 560 
+Q 262 858 262 1248 
+Q 262 1709 521 2032 
+Q 781 2355 1229 2451 
+L 1229 2477 
+Q 877 2573 656 2857 
+Q 435 3142 435 3507 
+Q 435 4064 832 4393 
+Q 1229 4723 1888 4723 
+Q 2554 4723 2944 4390 
+Q 3334 4058 3334 3507 
+Q 3334 3142 3113 2857 
+Q 2893 2573 2541 2477 
+L 2541 2451 
+Q 2995 2349 3251 2029 
+Q 3507 1709 3507 1248 
+Q 3507 851 3305 553 
+Q 3104 256 2736 96 
+Q 2368 -64 1888 -64 
+z
+M 1888 448 
+Q 2342 448 2614 685 
+Q 2886 922 2886 1325 
+Q 2886 1741 2633 1981 
+Q 2381 2221 1888 2221 
+Q 1395 2221 1139 1981 
+Q 883 1741 883 1325 
+Q 883 922 1158 685 
+Q 1434 448 1888 448 
+z
+M 1888 2682 
+Q 2298 2682 2525 2896 
+Q 2752 3110 2752 3450 
+Q 2752 3802 2534 4013 
+Q 2317 4224 1888 4224 
+Q 1459 4224 1241 4013 
+Q 1024 3802 1024 3450 
+Q 1024 3110 1248 2896 
+Q 1472 2682 1888 2682 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-212" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-52" transform="translate(62.421875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m05abdd3196" x="120.472409" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 16K -->
+      <g style="fill: #7b857e" transform="translate(113.892378 176.164) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-20b" d="M 1203 3462 
+L 109 3462 
+L 109 3904 
+L 352 3904 
+Q 1165 3904 1235 4672 
+L 1805 4672 
+L 1805 0 
+L 1203 0 
+L 1203 3462 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-210" d="M 2074 -58 
+Q 1261 -58 845 486 
+Q 429 1030 429 2074 
+Q 429 3424 857 4073 
+Q 1286 4723 2150 4723 
+Q 2790 4723 3187 4384 
+Q 3584 4045 3642 3469 
+L 3034 3469 
+Q 2982 3827 2748 4019 
+Q 2515 4211 2150 4211 
+Q 1536 4211 1280 3708 
+Q 1024 3206 1011 2195 
+L 1037 2195 
+Q 1165 2560 1481 2768 
+Q 1798 2976 2246 2976 
+Q 2669 2976 2992 2793 
+Q 3315 2611 3494 2275 
+Q 3674 1939 3674 1498 
+Q 3674 1030 3472 678 
+Q 3270 326 2905 134 
+Q 2541 -58 2074 -58 
+z
+M 2099 454 
+Q 2528 454 2793 739 
+Q 3059 1024 3059 1491 
+Q 3059 1965 2800 2240 
+Q 2541 2515 2112 2515 
+Q 1664 2515 1389 2220 
+Q 1114 1926 1114 1485 
+Q 1114 1011 1382 732 
+Q 1651 454 2099 454 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-20b" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-210" transform="translate(38.5 0)"/>
+       <use xlink:href="#MonaSans-Regular-52" transform="translate(103.015625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m05abdd3196" x="156.177244" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 32K -->
+      <g style="fill: #7b857e" transform="translate(149.117025 176.164) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-20d" d="M 1741 -58 
+Q 1056 -58 633 320 
+Q 211 698 186 1338 
+L 768 1338 
+Q 794 922 1056 688 
+Q 1318 454 1741 454 
+Q 2182 454 2438 697 
+Q 2694 941 2694 1350 
+Q 2694 1773 2457 1993 
+Q 2221 2214 1798 2214 
+L 1344 2214 
+L 1344 2662 
+L 1722 2662 
+Q 2125 2662 2358 2880 
+Q 2592 3098 2592 3450 
+Q 2592 3808 2368 4009 
+Q 2144 4211 1773 4211 
+Q 1395 4211 1155 3980 
+Q 915 3750 883 3373 
+L 294 3373 
+Q 326 3987 729 4355 
+Q 1133 4723 1786 4723 
+Q 2432 4723 2809 4390 
+Q 3187 4058 3187 3501 
+Q 3187 3136 2992 2857 
+Q 2797 2579 2470 2470 
+L 2470 2451 
+Q 2874 2355 3091 2054 
+Q 3309 1754 3309 1306 
+Q 3309 678 2883 310 
+Q 2458 -58 1741 -58 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-20c" d="M 237 160 
+Q 237 755 579 1206 
+Q 922 1658 1606 2163 
+Q 2106 2534 2317 2796 
+Q 2528 3059 2528 3373 
+Q 2528 3757 2310 3977 
+Q 2093 4198 1709 4198 
+Q 1325 4198 1081 3936 
+Q 838 3674 813 3226 
+L 224 3219 
+Q 250 3910 662 4313 
+Q 1075 4717 1734 4717 
+Q 2374 4717 2752 4355 
+Q 3130 3994 3130 3398 
+Q 3130 2938 2870 2566 
+Q 2611 2195 2016 1760 
+Q 1670 1504 1462 1328 
+Q 1254 1152 1100 944 
+Q 947 736 902 506 
+L 3226 512 
+L 3226 0 
+L 237 0 
+L 237 160 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-20d" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-20c" transform="translate(60.125 0)"/>
+       <use xlink:href="#MonaSans-Regular-52" transform="translate(115.328125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m05abdd3196" x="191.882079" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 64K -->
+      <g style="fill: #7b857e" transform="translate(184.311204 176.164) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-210" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-20e" transform="translate(66.515625 0)"/>
+       <use xlink:href="#MonaSans-Regular-52" transform="translate(128.421875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m05abdd3196" x="227.586913" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 128K -->
+      <g style="fill: #7b857e" transform="translate(218.974617 176.164) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-20b" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-20c" transform="translate(38.90625 0)"/>
+       <use xlink:href="#MonaSans-Regular-212" transform="translate(94.109375 0)"/>
+       <use xlink:href="#MonaSans-Regular-52" transform="translate(155.125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_7">
+     <!-- Context length -->
+     <g style="fill: #4c564f" transform="translate(110.744827 191.38) scale(0.08 -0.08)">
+      <defs>
+       <path id="MonaSans-Regular-1b" d="M 2541 -58 
+Q 1882 -58 1389 233 
+Q 896 525 627 1065 
+Q 358 1606 358 2330 
+Q 358 3059 627 3596 
+Q 896 4134 1392 4425 
+Q 1888 4717 2541 4717 
+Q 3360 4717 3897 4294 
+Q 4435 3872 4557 3136 
+L 3936 3136 
+Q 3834 3622 3462 3907 
+Q 3091 4192 2541 4192 
+Q 2061 4192 1705 3968 
+Q 1350 3744 1161 3325 
+Q 973 2906 973 2330 
+Q 973 1459 1392 966 
+Q 1811 474 2541 474 
+Q 3091 474 3468 758 
+Q 3846 1043 3936 1536 
+L 4557 1536 
+Q 4448 794 3907 368 
+Q 3366 -58 2541 -58 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-152" d="M 1862 -58 
+Q 1389 -58 1024 156 
+Q 659 371 460 761 
+Q 262 1152 262 1677 
+Q 262 2195 457 2588 
+Q 653 2982 1014 3203 
+Q 1376 3424 1862 3424 
+Q 2336 3424 2694 3209 
+Q 3053 2995 3254 2601 
+Q 3456 2208 3456 1683 
+Q 3456 1165 3261 771 
+Q 3066 378 2704 160 
+Q 2342 -58 1862 -58 
+z
+M 1856 429 
+Q 2323 429 2598 758 
+Q 2874 1088 2874 1683 
+Q 2874 2272 2602 2608 
+Q 2330 2944 1862 2944 
+Q 1389 2944 1117 2611 
+Q 845 2278 845 1677 
+Q 845 1088 1117 758 
+Q 1389 429 1856 429 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-14b" d="M 410 3366 
+L 954 3366 
+L 973 2662 
+L 1005 2662 
+Q 1152 3027 1453 3225 
+Q 1754 3424 2125 3424 
+Q 2662 3424 2969 3078 
+Q 3277 2733 3277 2003 
+L 3277 0 
+L 2714 0 
+L 2714 1882 
+Q 2714 2419 2518 2678 
+Q 2323 2938 1926 2938 
+Q 1504 2938 1241 2630 
+Q 979 2323 979 1837 
+L 979 0 
+L 410 0 
+L 410 3366 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-178" d="M 1446 0 
+Q 1082 0 902 176 
+Q 723 352 723 742 
+L 723 2899 
+L 83 2899 
+L 83 3366 
+L 723 3366 
+L 723 4352 
+L 1286 4435 
+L 1286 3366 
+L 2042 3366 
+L 2042 2899 
+L 1286 2899 
+L 1286 838 
+Q 1286 653 1369 569 
+Q 1453 486 1632 486 
+L 2048 486 
+L 2048 0 
+L 1446 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-112" d="M 1798 -58 
+Q 1062 -58 643 409 
+Q 224 877 224 1670 
+Q 224 2202 413 2595 
+Q 602 2989 954 3206 
+Q 1306 3424 1779 3424 
+Q 2298 3424 2650 3193 
+Q 3002 2963 3171 2547 
+Q 3341 2131 3309 1581 
+L 787 1581 
+Q 794 1011 1066 700 
+Q 1338 390 1798 390 
+Q 2157 390 2390 550 
+Q 2624 710 2714 1005 
+L 3270 1005 
+Q 3174 506 2780 224 
+Q 2387 -58 1798 -58 
+z
+M 2739 1978 
+Q 2714 2458 2458 2717 
+Q 2202 2976 1779 2976 
+Q 1357 2976 1091 2710 
+Q 826 2445 794 1978 
+L 2739 1978 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-19b" d="M 1357 1747 
+L 179 3366 
+L 851 3366 
+L 1587 2330 
+L 1734 2112 
+L 1760 2112 
+L 1914 2330 
+L 2637 3366 
+L 3277 3366 
+L 2118 1766 
+L 3405 0 
+L 2733 0 
+L 1907 1152 
+L 1728 1408 
+L 1709 1408 
+L 1530 1152 
+L 672 0 
+L 51 0 
+L 1357 1747 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-1" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-143" d="M 422 4774 
+L 992 4774 
+L 992 0 
+L 422 0 
+L 422 4774 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-125" d="M 1843 -1190 
+Q 1165 -1190 771 -940 
+Q 378 -691 307 -205 
+L 909 -205 
+Q 1030 -749 1856 -749 
+Q 2323 -749 2534 -531 
+Q 2746 -314 2746 160 
+L 2752 781 
+L 2726 781 
+Q 2605 448 2304 253 
+Q 2003 58 1594 58 
+Q 1197 58 893 259 
+Q 589 461 422 841 
+Q 256 1222 256 1741 
+Q 256 2266 422 2646 
+Q 589 3027 893 3228 
+Q 1197 3430 1594 3430 
+Q 2003 3430 2304 3241 
+Q 2605 3053 2733 2714 
+L 2758 2714 
+L 2771 3366 
+L 3315 3366 
+L 3315 230 
+Q 3315 -512 2944 -851 
+Q 2573 -1190 1843 -1190 
+z
+M 1786 538 
+Q 2074 538 2291 682 
+Q 2509 826 2627 1069 
+Q 2746 1312 2746 1594 
+L 2746 1914 
+Q 2746 2189 2630 2429 
+Q 2515 2669 2297 2813 
+Q 2080 2957 1786 2957 
+Q 1344 2957 1091 2640 
+Q 838 2323 838 1741 
+Q 838 1171 1091 854 
+Q 1344 538 1786 538 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-12b" d="M 416 4774 
+L 979 4774 
+L 979 2675 
+L 1005 2675 
+Q 1146 3027 1453 3225 
+Q 1760 3424 2131 3424 
+Q 2669 3424 2976 3078 
+Q 3283 2733 3283 2003 
+L 3283 0 
+L 2720 0 
+L 2720 1875 
+Q 2720 2419 2528 2678 
+Q 2336 2938 1933 2938 
+Q 1504 2938 1241 2627 
+Q 979 2317 979 1830 
+L 979 0 
+L 416 0 
+L 416 4774 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MonaSans-Regular-1b" transform="translate(1.40625 0)"/>
+      <use xlink:href="#MonaSans-Regular-152" transform="translate(77.21875 0)"/>
+      <use xlink:href="#MonaSans-Regular-14b" transform="translate(136.625 0)"/>
+      <use xlink:href="#MonaSans-Regular-178" transform="translate(194.921875 0)"/>
+      <use xlink:href="#MonaSans-Regular-112" transform="translate(229.234375 0)"/>
+      <use xlink:href="#MonaSans-Regular-19b" transform="translate(282.953125 0)"/>
+      <use xlink:href="#MonaSans-Regular-178" transform="translate(338.5625 0)"/>
+      <use xlink:href="#MonaSans-Regular-1" transform="translate(374.171875 0)"/>
+      <use xlink:href="#MonaSans-Regular-143" transform="translate(398.28125 0)"/>
+      <use xlink:href="#MonaSans-Regular-112" transform="translate(421.6875 0)"/>
+      <use xlink:href="#MonaSans-Regular-14b" transform="translate(477.796875 0)"/>
+      <use xlink:href="#MonaSans-Regular-125" transform="translate(536.890625 0)"/>
+      <use xlink:href="#MonaSans-Regular-178" transform="translate(596.59375 0)"/>
+      <use xlink:href="#MonaSans-Regular-12b" transform="translate(632.296875 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 40.136531 153.655889 
+L 236.513122 153.655889 
+" clip-path="url(#pdf67310e20)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <!-- 94% -->
+      <g style="fill: #7b857e" transform="translate(20.707469 157.906889) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-213" d="M 1907 4723 
+Q 2720 4723 3136 4179 
+Q 3552 3635 3552 2592 
+Q 3552 1242 3123 592 
+Q 2694 -58 1830 -58 
+Q 1190 -58 793 281 
+Q 397 621 339 1197 
+L 947 1197 
+Q 998 838 1232 646 
+Q 1466 454 1830 454 
+Q 2445 454 2701 956 
+Q 2957 1459 2970 2470 
+L 2944 2470 
+Q 2816 2106 2499 1898 
+Q 2182 1690 1734 1690 
+Q 1312 1690 989 1872 
+Q 666 2054 486 2390 
+Q 307 2726 307 3168 
+Q 307 3635 508 3987 
+Q 710 4339 1075 4531 
+Q 1440 4723 1907 4723 
+z
+M 1882 4211 
+Q 1453 4211 1187 3926 
+Q 922 3642 922 3174 
+Q 922 2701 1181 2425 
+Q 1440 2150 1869 2150 
+Q 2317 2150 2592 2444 
+Q 2867 2739 2867 3181 
+Q 2867 3654 2598 3932 
+Q 2330 4211 1882 4211 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-2e2" d="M 3872 4666 
+L 4314 4666 
+L 1389 0 
+L 947 0 
+L 3872 4666 
+z
+M 1242 2099 
+Q 819 2099 569 2432 
+Q 320 2765 320 3386 
+Q 320 4006 569 4336 
+Q 819 4666 1242 4666 
+Q 1664 4666 1910 4336 
+Q 2157 4006 2157 3386 
+Q 2157 2765 1910 2432 
+Q 1664 2099 1242 2099 
+z
+M 1242 2464 
+Q 1485 2464 1613 2701 
+Q 1741 2938 1741 3386 
+Q 1741 3834 1613 4070 
+Q 1485 4307 1242 4307 
+Q 992 4307 864 4070 
+Q 736 3834 736 3386 
+Q 736 2938 864 2701 
+Q 992 2464 1242 2464 
+z
+M 4032 -45 
+Q 3603 -45 3353 284 
+Q 3104 614 3104 1242 
+Q 3104 1862 3353 2192 
+Q 3603 2522 4032 2522 
+Q 4448 2522 4694 2192 
+Q 4941 1862 4941 1242 
+Q 4941 621 4694 288 
+Q 4448 -45 4032 -45 
+z
+M 4032 320 
+Q 4275 320 4400 557 
+Q 4525 794 4525 1242 
+Q 4525 1690 4397 1926 
+Q 4269 2163 4032 2163 
+Q 3776 2163 3648 1926 
+Q 3520 1690 3520 1242 
+Q 3520 787 3648 553 
+Q 3776 320 4032 320 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-213" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-20e" transform="translate(64.609375 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(122.015625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 40.136531 123.631444 
+L 236.513122 123.631444 
+" clip-path="url(#pdf67310e20)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_9">
+      <!-- 96% -->
+      <g style="fill: #7b857e" transform="translate(20.239469 127.882444) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-213" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-210" transform="translate(64.609375 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(128.015625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 40.136531 93.607 
+L 236.513122 93.607 
+" clip-path="url(#pdf67310e20)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_10">
+      <!-- 98% -->
+      <g style="fill: #7b857e" transform="translate(20.457625 97.858) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-213" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-212" transform="translate(65.109375 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(125.21875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 40.136531 63.582556 
+L 236.513122 63.582556 
+" clip-path="url(#pdf67310e20)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_11">
+      <!-- 100% -->
+      <g style="fill: #7b857e" transform="translate(17.284 67.833556) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-20a" d="M 1997 -58 
+Q 1235 -58 819 556 
+Q 403 1171 403 2317 
+Q 403 3475 822 4086 
+Q 1242 4698 1997 4698 
+Q 2758 4698 3171 4080 
+Q 3584 3462 3584 2317 
+Q 3584 1158 3165 550 
+Q 2746 -58 1997 -58 
+z
+M 1997 461 
+Q 2490 461 2736 937 
+Q 2982 1414 2982 2317 
+Q 2982 3226 2736 3702 
+Q 2490 4179 1997 4179 
+Q 1498 4179 1254 3702 
+Q 1011 3226 1011 2317 
+Q 1011 1408 1254 934 
+Q 1498 461 1997 461 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-20b" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-20a" transform="translate(38.703125 0)"/>
+       <use xlink:href="#MonaSans-Regular-20a" transform="translate(102.5 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(165.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_12">
+     <!-- Token-set recall -->
+     <g style="fill: #4c564f" transform="translate(10.596 137.980125) rotate(-90) scale(0.084 -0.084)">
+      <defs>
+       <path id="MonaSans-Regular-89" d="M 1651 4134 
+L 96 4134 
+L 96 4666 
+L 3808 4666 
+L 3808 4134 
+L 2246 4134 
+L 2246 0 
+L 1651 0 
+L 1651 4134 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-141" d="M 1818 1350 
+L 1600 1664 
+L 992 1056 
+L 992 0 
+L 416 0 
+L 416 4774 
+L 992 4774 
+L 992 1722 
+L 1280 2035 
+L 2579 3366 
+L 3270 3366 
+L 2016 2067 
+L 3379 0 
+L 2714 0 
+L 1818 1350 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-286" d="M 198 1933 
+L 2208 1933 
+L 2208 1446 
+L 198 1446 
+L 198 1933 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-171" d="M 1594 -64 
+Q 966 -64 598 214 
+Q 230 493 198 992 
+L 762 992 
+Q 800 672 1021 515 
+Q 1242 358 1606 358 
+Q 1971 358 2166 499 
+Q 2362 640 2362 902 
+Q 2362 1178 2179 1296 
+Q 1997 1414 1530 1478 
+Q 877 1574 589 1779 
+Q 301 1984 301 2432 
+Q 301 2886 649 3158 
+Q 998 3430 1574 3430 
+Q 2138 3430 2470 3164 
+Q 2803 2899 2842 2432 
+L 2278 2432 
+Q 2214 3008 1562 3008 
+Q 1235 3008 1046 2867 
+Q 858 2726 858 2490 
+Q 858 2240 1050 2128 
+Q 1242 2016 1728 1946 
+Q 2342 1862 2636 1644 
+Q 2931 1427 2931 947 
+Q 2931 467 2576 201 
+Q 2221 -64 1594 -64 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-16d" d="M 403 3366 
+L 915 3366 
+L 947 2746 
+L 966 2746 
+Q 1075 3066 1337 3238 
+Q 1600 3411 1946 3411 
+L 2099 3405 
+L 2099 2854 
+Q 2054 2861 1939 2861 
+Q 1504 2861 1254 2630 
+Q 1005 2400 973 1971 
+L 973 0 
+L 403 0 
+L 403 3366 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-108" d="M 1850 -58 
+Q 1376 -58 1014 156 
+Q 653 371 457 764 
+Q 262 1158 262 1677 
+Q 262 2195 460 2592 
+Q 659 2989 1024 3206 
+Q 1389 3424 1875 3424 
+Q 2470 3424 2864 3107 
+Q 3258 2790 3334 2259 
+L 2758 2259 
+Q 2675 2586 2438 2762 
+Q 2202 2938 1856 2938 
+Q 1376 2938 1107 2595 
+Q 838 2253 838 1677 
+Q 838 1088 1110 758 
+Q 1382 429 1850 429 
+Q 2214 429 2457 621 
+Q 2701 813 2771 1146 
+L 3347 1146 
+Q 3264 589 2861 265 
+Q 2458 -58 1850 -58 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-ef" d="M 1619 -58 
+Q 1216 -58 912 153 
+Q 608 365 441 758 
+Q 275 1152 275 1683 
+Q 275 2221 441 2617 
+Q 608 3014 912 3222 
+Q 1216 3430 1619 3430 
+Q 2029 3430 2329 3225 
+Q 2630 3021 2752 2675 
+L 2771 2675 
+L 2790 3366 
+L 3328 3366 
+L 3328 0 
+L 2790 0 
+L 2771 704 
+L 2752 704 
+Q 2624 346 2326 144 
+Q 2029 -58 1619 -58 
+z
+M 1805 429 
+Q 2093 429 2313 579 
+Q 2534 730 2649 979 
+Q 2765 1229 2765 1523 
+L 2765 1843 
+Q 2765 2138 2649 2390 
+Q 2534 2643 2316 2796 
+Q 2099 2950 1811 2950 
+Q 1363 2950 1110 2617 
+Q 858 2285 858 1683 
+Q 858 1094 1110 761 
+Q 1363 429 1805 429 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MonaSans-Regular-89" transform="translate(1.40625 0)"/>
+      <use xlink:href="#MonaSans-Regular-152" transform="translate(52.609375 0)"/>
+      <use xlink:href="#MonaSans-Regular-141" transform="translate(111.921875 0)"/>
+      <use xlink:href="#MonaSans-Regular-112" transform="translate(164.328125 0)"/>
+      <use xlink:href="#MonaSans-Regular-14b" transform="translate(220.4375 0)"/>
+      <use xlink:href="#MonaSans-Regular-286" transform="translate(279.640625 0)"/>
+      <use xlink:href="#MonaSans-Regular-171" transform="translate(318.140625 0)"/>
+      <use xlink:href="#MonaSans-Regular-112" transform="translate(368.75 0)"/>
+      <use xlink:href="#MonaSans-Regular-178" transform="translate(423.859375 0)"/>
+      <use xlink:href="#MonaSans-Regular-1" transform="translate(459.46875 0)"/>
+      <use xlink:href="#MonaSans-Regular-16d" transform="translate(483.578125 0)"/>
+      <use xlink:href="#MonaSans-Regular-112" transform="translate(516.484375 0)"/>
+      <use xlink:href="#MonaSans-Regular-108" transform="translate(573.09375 0)"/>
+      <use xlink:href="#MonaSans-Regular-ef" transform="translate(629.40625 0)"/>
+      <use xlink:href="#MonaSans-Regular-143" transform="translate(689.21875 0)"/>
+      <use xlink:href="#MonaSans-Regular-143" transform="translate(712.71875 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_15">
+    <path d="M 40.136531 63.582556 
+L 236.513122 63.582556 
+" clip-path="url(#pdf67310e20)" style="fill: none; stroke-dasharray: 2.4,2.4; stroke-dashoffset: 0; stroke: #7b857e; stroke-width: 0.8"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 40.136531 161.162 
+L 40.136531 53.074 
+" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 40.136531 161.162 
+L 236.513122 161.162 
+" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <!-- mean 99.96% -->
+    <g style="fill: #1f9a5c" transform="translate(176.336038 88.75713) scale(0.078 -0.078)">
+     <defs>
+      <path id="MonaSans-SemiBold-149" d="M 365 3405 
+L 1133 3405 
+L 1158 2771 
+L 1190 2771 
+Q 1318 3104 1606 3286 
+Q 1894 3469 2240 3469 
+Q 3027 3469 3264 2726 
+L 3296 2726 
+Q 3430 3085 3728 3277 
+Q 4026 3469 4403 3469 
+Q 4909 3469 5213 3129 
+Q 5517 2790 5517 2074 
+L 5517 0 
+L 4723 0 
+L 4723 1901 
+Q 4723 2362 4572 2582 
+Q 4422 2803 4096 2803 
+Q 3757 2803 3549 2550 
+Q 3341 2298 3341 1914 
+L 3341 0 
+L 2541 0 
+L 2541 1901 
+Q 2541 2362 2390 2582 
+Q 2240 2803 1914 2803 
+Q 1574 2803 1366 2550 
+Q 1158 2298 1158 1914 
+L 1158 0 
+L 365 0 
+L 365 3405 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-112" d="M 1837 -58 
+Q 1325 -58 950 156 
+Q 576 371 381 764 
+Q 186 1158 186 1683 
+Q 186 2221 384 2624 
+Q 582 3027 950 3248 
+Q 1318 3469 1811 3469 
+Q 2586 3469 3002 3001 
+Q 3418 2534 3418 1754 
+Q 3418 1613 3411 1536 
+L 979 1536 
+Q 979 1069 1209 809 
+Q 1440 550 1837 550 
+Q 2438 550 2598 1043 
+L 3379 1043 
+Q 3290 531 2874 236 
+Q 2458 -58 1837 -58 
+z
+M 2611 2048 
+Q 2592 2438 2377 2649 
+Q 2163 2861 1805 2861 
+Q 1453 2861 1235 2640 
+Q 1018 2419 986 2042 
+L 2611 2048 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-ef" d="M 1574 -58 
+Q 1165 -58 861 153 
+Q 557 365 393 761 
+Q 230 1158 230 1702 
+Q 230 2528 592 2998 
+Q 954 3469 1574 3469 
+Q 1958 3469 2243 3280 
+Q 2528 3091 2643 2765 
+L 2669 2765 
+L 2701 3405 
+L 3456 3405 
+L 3456 0 
+L 2701 0 
+L 2669 646 
+L 2643 646 
+Q 2528 320 2243 131 
+Q 1958 -58 1574 -58 
+z
+M 1850 602 
+Q 2221 602 2441 880 
+Q 2662 1158 2662 1568 
+L 2662 1837 
+Q 2662 2246 2444 2528 
+Q 2227 2810 1862 2810 
+Q 1472 2810 1257 2522 
+Q 1043 2234 1043 1702 
+Q 1043 1184 1254 893 
+Q 1466 602 1850 602 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-14b" d="M 365 3405 
+L 1133 3405 
+L 1158 2739 
+L 1190 2739 
+Q 1325 3091 1613 3280 
+Q 1901 3469 2266 3469 
+Q 2803 3469 3110 3120 
+Q 3418 2771 3418 2048 
+L 3418 0 
+L 2624 0 
+L 2624 1869 
+Q 2624 2349 2464 2576 
+Q 2304 2803 1958 2803 
+Q 1606 2803 1385 2544 
+Q 1165 2285 1165 1882 
+L 1165 0 
+L 365 0 
+L 365 3405 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-1" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-213" d="M 1958 4723 
+Q 2797 4723 3245 4169 
+Q 3693 3616 3693 2528 
+Q 3693 -58 1875 -58 
+Q 1190 -58 768 294 
+Q 346 646 275 1261 
+L 1133 1261 
+Q 1178 966 1379 809 
+Q 1581 653 1882 653 
+Q 2394 653 2624 1069 
+Q 2854 1485 2867 2317 
+L 2829 2317 
+Q 2694 2010 2406 1837 
+Q 2118 1664 1709 1664 
+Q 1280 1664 953 1849 
+Q 627 2035 448 2368 
+Q 269 2701 269 3136 
+Q 269 3610 480 3971 
+Q 691 4333 1075 4528 
+Q 1459 4723 1958 4723 
+z
+M 1926 4019 
+Q 1568 4019 1347 3779 
+Q 1126 3539 1126 3149 
+Q 1126 2758 1344 2528 
+Q 1562 2298 1920 2298 
+Q 2291 2298 2518 2538 
+Q 2746 2778 2746 3155 
+Q 2746 3552 2522 3785 
+Q 2298 4019 1926 4019 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-264" d="M 704 -51 
+Q 493 -51 358 80 
+Q 224 211 224 422 
+Q 224 634 358 765 
+Q 493 896 704 896 
+Q 922 896 1053 765 
+Q 1184 634 1184 422 
+Q 1184 211 1053 80 
+Q 922 -51 704 -51 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-210" d="M 2093 -58 
+Q 1254 -58 806 496 
+Q 358 1050 358 2138 
+Q 358 4723 2176 4723 
+Q 2861 4723 3283 4371 
+Q 3706 4019 3776 3405 
+L 2918 3405 
+Q 2874 3699 2672 3856 
+Q 2470 4013 2170 4013 
+Q 1658 4013 1427 3597 
+Q 1197 3181 1184 2349 
+L 1222 2349 
+Q 1357 2656 1645 2829 
+Q 1933 3002 2342 3002 
+Q 2771 3002 3097 2816 
+Q 3424 2630 3603 2297 
+Q 3782 1965 3782 1530 
+Q 3782 1056 3571 694 
+Q 3360 333 2976 137 
+Q 2592 -58 2093 -58 
+z
+M 2125 646 
+Q 2483 646 2704 886 
+Q 2925 1126 2925 1517 
+Q 2925 1907 2707 2137 
+Q 2490 2368 2131 2368 
+Q 1760 2368 1533 2128 
+Q 1306 1888 1306 1510 
+Q 1306 1114 1530 880 
+Q 1754 646 2125 646 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-2e2" d="M 3834 4666 
+L 4397 4666 
+L 1466 0 
+L 902 0 
+L 3834 4666 
+z
+M 1242 2118 
+Q 800 2118 544 2444 
+Q 288 2771 288 3392 
+Q 288 4013 544 4339 
+Q 800 4666 1242 4666 
+Q 1677 4666 1933 4339 
+Q 2189 4013 2189 3392 
+Q 2189 2771 1933 2444 
+Q 1677 2118 1242 2118 
+z
+M 1242 2586 
+Q 1446 2586 1548 2794 
+Q 1651 3002 1651 3392 
+Q 1651 3782 1548 3990 
+Q 1446 4198 1242 4198 
+Q 1037 4198 931 3990 
+Q 826 3782 826 3392 
+Q 826 3002 931 2794 
+Q 1037 2586 1242 2586 
+z
+M 4064 -51 
+Q 3622 -51 3366 275 
+Q 3110 602 3110 1229 
+Q 3110 1850 3366 2173 
+Q 3622 2496 4064 2496 
+Q 4506 2496 4758 2169 
+Q 5011 1843 5011 1222 
+Q 5011 602 4755 275 
+Q 4499 -51 4064 -51 
+z
+M 4064 416 
+Q 4269 416 4371 624 
+Q 4474 832 4474 1222 
+Q 4474 1613 4371 1821 
+Q 4269 2029 4064 2029 
+Q 3654 2029 3654 1222 
+Q 3654 416 4064 416 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MonaSans-SemiBold-149" transform="translate(1.40625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-112" transform="translate(94.609375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-ef" transform="translate(152.515625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-14b" transform="translate(213.828125 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-1" transform="translate(273.9375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-213" transform="translate(297.546875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-213" transform="translate(362.15625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-264" transform="translate(422.859375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-213" transform="translate(445.5625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-210" transform="translate(509.96875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-2e2" transform="translate(574.265625 0)"/>
+    </g>
+   </g>
+   <g id="text_14">
+    <!-- (a) RULER -->
+    <g style="fill: #141a16" transform="translate(40.136531 47.074) scale(0.086 -0.086)">
+     <defs>
+      <path id="MonaSans-SemiBold-28d" d="M 1350 -1069 
+Q 838 -550 534 291 
+Q 230 1133 230 2003 
+Q 230 2874 534 3715 
+Q 838 4557 1350 5075 
+L 2035 5075 
+Q 1562 4531 1283 3692 
+Q 1005 2854 1005 2003 
+Q 1005 1139 1286 304 
+Q 1568 -531 2035 -1069 
+L 1350 -1069 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-28e" d="M 851 5075 
+Q 1363 4557 1667 3715 
+Q 1971 2874 1971 2003 
+Q 1971 1133 1667 291 
+Q 1363 -550 851 -1069 
+L 166 -1069 
+Q 640 -525 918 313 
+Q 1197 1152 1197 2003 
+Q 1197 2867 915 3702 
+Q 634 4538 166 5075 
+L 851 5075 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-7e" d="M 422 4666 
+L 2688 4666 
+Q 3392 4666 3785 4342 
+Q 4179 4019 4179 3398 
+Q 4179 2963 3952 2668 
+Q 3725 2374 3315 2266 
+L 3315 2227 
+Q 3718 2150 3894 1929 
+Q 4070 1709 4070 1306 
+L 4070 531 
+Q 4070 192 4154 0 
+L 3302 0 
+Q 3226 166 3226 544 
+L 3226 1146 
+Q 3226 1485 3059 1648 
+Q 2893 1811 2477 1811 
+L 1267 1811 
+L 1267 0 
+L 422 0 
+L 422 4666 
+z
+M 2496 2496 
+Q 2912 2496 3113 2697 
+Q 3315 2899 3315 3245 
+Q 3315 3616 3097 3789 
+Q 2880 3962 2496 3962 
+L 1267 3962 
+L 1267 2496 
+L 2496 2496 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-8e" d="M 2266 -58 
+Q 1363 -58 854 419 
+Q 346 896 346 1754 
+L 346 4666 
+L 1190 4666 
+L 1190 1754 
+Q 1190 1235 1478 963 
+Q 1766 691 2272 691 
+Q 2803 691 3081 972 
+Q 3360 1254 3360 1754 
+L 3360 4666 
+L 4198 4666 
+L 4198 1754 
+Q 4198 909 3689 425 
+Q 3181 -58 2266 -58 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-54" d="M 422 4666 
+L 1267 4666 
+L 1267 755 
+L 3494 755 
+L 3494 0 
+L 422 0 
+L 422 4666 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-25" d="M 410 4666 
+L 3712 4666 
+L 3712 3936 
+L 1254 3936 
+L 1254 2720 
+L 3405 2720 
+L 3405 2035 
+L 1254 2035 
+L 1254 730 
+L 3725 730 
+L 3725 0 
+L 410 0 
+L 410 4666 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MonaSans-SemiBold-28d" transform="translate(1.40625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-ef" transform="translate(29.515625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-28e" transform="translate(85.03125 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-1" transform="translate(120.84375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-7e" transform="translate(144.453125 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-8e" transform="translate(216.359375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-54" transform="translate(289.15625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-25" transform="translate(346.171875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-7e" transform="translate(408.171875 0)"/>
+    </g>
+   </g>
+   <g id="line2d_16">
+    <path d="M 49.06274 63.708658 
+L 84.767575 63.822751 
+L 120.472409 66.298267 
+L 156.177244 76.959947 
+L 191.882079 94.217997 
+L 227.586913 111.241857 
+" clip-path="url(#pdf67310e20)" style="fill: none; stroke-dasharray: 6.8,3.4; stroke-dashoffset: 0; stroke: #2a78d6; stroke-width: 1.7"/>
+    <defs>
+     <path id="mbdb596c072" d="M -0 2.404163 
+L 2.404163 0 
+L 0 -2.404163 
+L -2.404163 -0 
+z
+" style="stroke: #ffffff; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#pdf67310e20)">
+     <use xlink:href="#mbdb596c072" x="49.06274" y="63.708658" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+     <use xlink:href="#mbdb596c072" x="84.767575" y="63.822751" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+     <use xlink:href="#mbdb596c072" x="120.472409" y="66.298267" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+     <use xlink:href="#mbdb596c072" x="156.177244" y="76.959947" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+     <use xlink:href="#mbdb596c072" x="191.882079" y="94.217997" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+     <use xlink:href="#mbdb596c072" x="227.586913" y="111.241857" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_17">
+    <path d="M 49.06274 63.582556 
+L 84.767575 63.582556 
+L 120.472409 63.82125 
+L 156.177244 64.023915 
+L 191.882079 64.504306 
+L 227.586913 65.242907 
+" clip-path="url(#pdf67310e20)" style="fill: none; stroke: #1f9a5c; stroke-width: 1.7; stroke-linecap: square"/>
+    <defs>
+     <path id="mee80a8cc74" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #ffffff"/>
+    </defs>
+    <g clip-path="url(#pdf67310e20)">
+     <use xlink:href="#mee80a8cc74" x="49.06274" y="63.582556" style="fill: #1f9a5c; stroke: #ffffff"/>
+     <use xlink:href="#mee80a8cc74" x="84.767575" y="63.582556" style="fill: #1f9a5c; stroke: #ffffff"/>
+     <use xlink:href="#mee80a8cc74" x="120.472409" y="63.82125" style="fill: #1f9a5c; stroke: #ffffff"/>
+     <use xlink:href="#mee80a8cc74" x="156.177244" y="64.023915" style="fill: #1f9a5c; stroke: #ffffff"/>
+     <use xlink:href="#mee80a8cc74" x="191.882079" y="64.504306" style="fill: #1f9a5c; stroke: #ffffff"/>
+     <use xlink:href="#mee80a8cc74" x="227.586913" y="65.242907" style="fill: #1f9a5c; stroke: #ffffff"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 275.78844 161.162 
+L 472.165031 161.162 
+L 472.165031 53.074 
+L 275.78844 53.074 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_7">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m05abdd3196" x="295.426099" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- Short -->
+      <g style="fill: #7b857e" transform="translate(285.476224 176.164) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-82" d="M 2022 -58 
+Q 1171 -58 716 332 
+Q 262 723 230 1395 
+L 845 1395 
+Q 877 928 1171 675 
+Q 1466 422 2042 422 
+Q 2554 422 2845 633 
+Q 3136 845 3136 1229 
+Q 3136 1504 3017 1670 
+Q 2899 1837 2640 1939 
+Q 2381 2042 1907 2131 
+Q 1101 2278 726 2563 
+Q 352 2848 352 3418 
+Q 352 3808 550 4102 
+Q 749 4397 1120 4557 
+Q 1491 4717 1984 4717 
+Q 2720 4717 3145 4371 
+Q 3571 4026 3616 3430 
+L 3008 3430 
+Q 2963 3827 2688 4035 
+Q 2413 4243 1958 4243 
+Q 1498 4243 1235 4041 
+Q 973 3840 973 3494 
+Q 973 3238 1088 3091 
+Q 1203 2944 1459 2851 
+Q 1715 2758 2208 2669 
+Q 2720 2573 3049 2432 
+Q 3379 2291 3568 2012 
+Q 3757 1734 3757 1274 
+Q 3757 659 3296 300 
+Q 2835 -58 2022 -58 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-82" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-12b" transform="translate(66.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-152" transform="translate(125.3125 0)"/>
+       <use xlink:href="#MonaSans-Regular-16d" transform="translate(184.71875 0)"/>
+       <use xlink:href="#MonaSans-Regular-178" transform="translate(220.921875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m05abdd3196" x="373.976736" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <!-- Medium -->
+      <g style="fill: #7b857e" transform="translate(359.26033 176.164) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-5a" d="M 454 4666 
+L 1395 4666 
+L 2342 2022 
+L 2726 813 
+L 2758 813 
+L 3136 2016 
+L 4083 4666 
+L 5018 4666 
+L 5018 0 
+L 4422 0 
+L 4422 2362 
+L 4442 4032 
+L 4403 4032 
+L 3898 2502 
+L 3002 0 
+L 2470 0 
+L 1587 2490 
+L 1069 4026 
+L 1037 4026 
+L 1050 2355 
+L 1050 0 
+L 454 0 
+L 454 4666 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-10e" d="M 1626 -58 
+Q 1222 -58 918 153 
+Q 614 365 448 758 
+Q 282 1152 282 1683 
+Q 282 2221 448 2617 
+Q 614 3014 918 3222 
+Q 1222 3430 1626 3430 
+Q 2035 3430 2332 3225 
+Q 2630 3021 2746 2682 
+L 2771 2682 
+L 2765 4774 
+L 3334 4774 
+L 3334 0 
+L 2797 0 
+L 2778 691 
+L 2746 691 
+Q 2630 352 2329 147 
+Q 2029 -58 1626 -58 
+z
+M 1811 429 
+Q 2106 429 2320 576 
+Q 2534 723 2649 972 
+Q 2765 1222 2765 1517 
+L 2765 1850 
+Q 2765 2150 2653 2400 
+Q 2541 2650 2326 2800 
+Q 2112 2950 1824 2950 
+Q 1370 2950 1117 2617 
+Q 864 2285 864 1683 
+Q 864 1094 1113 761 
+Q 1363 429 1811 429 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-12e" d="M 410 3366 
+L 979 3366 
+L 979 0 
+L 410 0 
+L 410 3366 
+z
+M 698 3962 
+Q 532 3962 426 4064 
+Q 320 4167 320 4327 
+Q 320 4487 426 4589 
+Q 532 4692 698 4692 
+Q 864 4692 970 4589 
+Q 1076 4487 1076 4327 
+Q 1076 4167 970 4064 
+Q 864 3962 698 3962 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-17d" d="M 1549 -58 
+Q 992 -58 688 288 
+Q 384 634 384 1286 
+L 384 3366 
+L 954 3366 
+L 954 1427 
+Q 954 934 1146 678 
+Q 1338 422 1747 422 
+Q 2163 422 2425 736 
+Q 2688 1050 2688 1562 
+L 2688 3366 
+L 3251 3366 
+L 3251 0 
+L 2714 0 
+L 2688 717 
+L 2662 717 
+Q 2534 352 2236 147 
+Q 1939 -58 1549 -58 
+z
+" transform="scale(0.015625)"/>
+        <path id="MonaSans-Regular-149" d="M 410 3366 
+L 954 3366 
+L 973 2694 
+L 998 2694 
+Q 1139 3046 1433 3235 
+Q 1728 3424 2086 3424 
+Q 2470 3424 2736 3229 
+Q 3002 3034 3117 2643 
+L 3149 2643 
+Q 3290 3014 3597 3219 
+Q 3904 3424 4288 3424 
+Q 4800 3424 5097 3091 
+Q 5395 2758 5395 2042 
+L 5395 0 
+L 4832 0 
+L 4832 1926 
+Q 4832 2445 4653 2691 
+Q 4474 2938 4090 2938 
+Q 3686 2938 3436 2640 
+Q 3187 2342 3187 1875 
+L 3187 0 
+L 2618 0 
+L 2618 1926 
+Q 2618 2445 2438 2691 
+Q 2259 2938 1882 2938 
+Q 1472 2938 1222 2640 
+Q 973 2342 973 1875 
+L 973 0 
+L 410 0 
+L 410 3366 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-5a" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-112" transform="translate(88.3125 0)"/>
+       <use xlink:href="#MonaSans-Regular-10e" transform="translate(144.828125 0)"/>
+       <use xlink:href="#MonaSans-Regular-12e" transform="translate(205.125 0)"/>
+       <use xlink:href="#MonaSans-Regular-17d" transform="translate(228.328125 0)"/>
+       <use xlink:href="#MonaSans-Regular-149" transform="translate(287.140625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m05abdd3196" x="452.527372" y="161.162" style="fill: #7b857e; stroke: #7b857e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- Long -->
+      <g style="fill: #7b857e" transform="translate(443.533607 176.164) scale(0.078 -0.078)">
+       <defs>
+        <path id="MonaSans-Regular-54" d="M 486 4666 
+L 1082 4666 
+L 1082 544 
+L 3456 544 
+L 3456 0 
+L 486 0 
+L 486 4666 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#MonaSans-Regular-54" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-152" transform="translate(54.015625 0)"/>
+       <use xlink:href="#MonaSans-Regular-14b" transform="translate(113.421875 0)"/>
+       <use xlink:href="#MonaSans-Regular-125" transform="translate(172.515625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_18">
+     <!-- Input group -->
+     <g style="fill: #4c564f" transform="translate(352.614861 191.38) scale(0.08 -0.08)">
+      <defs>
+       <path id="MonaSans-Regular-41" d="M 486 4666 
+L 1088 4666 
+L 1088 0 
+L 486 0 
+L 486 4666 
+z
+" transform="scale(0.015625)"/>
+       <path id="MonaSans-Regular-16a" d="M 416 3366 
+L 954 3366 
+L 973 2669 
+L 1005 2669 
+Q 1126 3014 1424 3219 
+Q 1722 3424 2125 3424 
+Q 2528 3424 2832 3216 
+Q 3136 3008 3302 2614 
+Q 3469 2221 3469 1683 
+Q 3469 1146 3302 752 
+Q 3136 358 2832 150 
+Q 2528 -58 2125 -58 
+Q 1715 -58 1420 140 
+Q 1126 339 1005 678 
+L 979 678 
+L 986 -1107 
+L 416 -1107 
+L 416 3366 
+z
+M 1926 416 
+Q 2374 416 2630 752 
+Q 2886 1088 2886 1683 
+Q 2886 2272 2633 2608 
+Q 2381 2944 1939 2944 
+Q 1498 2944 1242 2630 
+Q 986 2317 986 1862 
+L 986 1498 
+Q 986 1043 1242 729 
+Q 1498 416 1926 416 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#MonaSans-Regular-41" transform="translate(1.40625 0)"/>
+      <use xlink:href="#MonaSans-Regular-14b" transform="translate(27.3125 0)"/>
+      <use xlink:href="#MonaSans-Regular-16a" transform="translate(85.8125 0)"/>
+      <use xlink:href="#MonaSans-Regular-17d" transform="translate(145.90625 0)"/>
+      <use xlink:href="#MonaSans-Regular-178" transform="translate(204.71875 0)"/>
+      <use xlink:href="#MonaSans-Regular-1" transform="translate(240.328125 0)"/>
+      <use xlink:href="#MonaSans-Regular-125" transform="translate(264.4375 0)"/>
+      <use xlink:href="#MonaSans-Regular-16d" transform="translate(324.234375 0)"/>
+      <use xlink:href="#MonaSans-Regular-152" transform="translate(357.140625 0)"/>
+      <use xlink:href="#MonaSans-Regular-17d" transform="translate(416.640625 0)"/>
+      <use xlink:href="#MonaSans-Regular-16a" transform="translate(475.453125 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_5">
+     <g id="line2d_21">
+      <path d="M 275.78844 153.655889 
+L 472.165031 153.655889 
+" clip-path="url(#pbaaaa6ad5c)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_19">
+      <!-- 94% -->
+      <g style="fill: #7b857e" transform="translate(256.359378 157.906889) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-213" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-20e" transform="translate(64.609375 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(122.015625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_23">
+      <path d="M 275.78844 123.631444 
+L 472.165031 123.631444 
+" clip-path="url(#pbaaaa6ad5c)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24"/>
+     <g id="text_20">
+      <!-- 96% -->
+      <g style="fill: #7b857e" transform="translate(255.891378 127.882444) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-213" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-210" transform="translate(64.609375 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(128.015625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_25">
+      <path d="M 275.78844 93.607 
+L 472.165031 93.607 
+" clip-path="url(#pbaaaa6ad5c)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26"/>
+     <g id="text_21">
+      <!-- 98% -->
+      <g style="fill: #7b857e" transform="translate(256.109534 97.858) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-213" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-212" transform="translate(65.109375 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(125.21875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_27">
+      <path d="M 275.78844 63.582556 
+L 472.165031 63.582556 
+" clip-path="url(#pbaaaa6ad5c)" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28"/>
+     <g id="text_22">
+      <!-- 100% -->
+      <g style="fill: #7b857e" transform="translate(252.935909 67.833556) scale(0.078 -0.078)">
+       <use xlink:href="#MonaSans-Regular-20b" transform="translate(1.40625 0)"/>
+       <use xlink:href="#MonaSans-Regular-20a" transform="translate(38.703125 0)"/>
+       <use xlink:href="#MonaSans-Regular-20a" transform="translate(102.5 0)"/>
+       <use xlink:href="#MonaSans-Regular-2e2" transform="translate(165.90625 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_29">
+    <path d="M 275.78844 63.582556 
+L 472.165031 63.582556 
+" clip-path="url(#pbaaaa6ad5c)" style="fill: none; stroke-dasharray: 2.4,2.4; stroke-dashoffset: 0; stroke: #7b857e; stroke-width: 0.8"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 275.78844 161.162 
+L 275.78844 53.074 
+" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 275.78844 161.162 
+L 472.165031 161.162 
+" style="fill: none; stroke: #e2e9e3; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_23">
+    <!-- mean 99.90% -->
+    <g style="fill: #1f9a5c" transform="translate(401.330122 89.40866) scale(0.078 -0.078)">
+     <defs>
+      <path id="MonaSans-SemiBold-20a" d="M 1997 -64 
+Q 1203 -64 771 560 
+Q 339 1184 339 2317 
+Q 339 3469 777 4083 
+Q 1216 4698 1997 4698 
+Q 2797 4698 3229 4077 
+Q 3661 3456 3661 2317 
+Q 3661 1165 3219 550 
+Q 2778 -64 1997 -64 
+z
+M 1997 659 
+Q 2810 659 2810 2317 
+Q 2810 3981 1997 3981 
+Q 1184 3981 1184 2317 
+Q 1184 659 1997 659 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MonaSans-SemiBold-149" transform="translate(1.40625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-112" transform="translate(94.609375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-ef" transform="translate(152.515625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-14b" transform="translate(213.828125 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-1" transform="translate(273.9375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-213" transform="translate(297.546875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-213" transform="translate(362.15625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-264" transform="translate(422.859375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-213" transform="translate(445.5625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-20a" transform="translate(510.171875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-2e2" transform="translate(573.578125 0)"/>
+    </g>
+   </g>
+   <g id="text_24">
+    <!-- (b) LongBench v2 -->
+    <g style="fill: #141a16" transform="translate(275.78844 47.074) scale(0.086 -0.086)">
+     <defs>
+      <path id="MonaSans-SemiBold-107" d="M 2259 -64 
+Q 1875 -64 1593 125 
+Q 1312 314 1197 640 
+L 1158 640 
+L 1133 0 
+L 371 0 
+L 371 4774 
+L 1171 4774 
+L 1165 2758 
+L 1197 2758 
+Q 1306 3085 1590 3277 
+Q 1875 3469 2259 3469 
+Q 2662 3469 2966 3257 
+Q 3270 3046 3436 2646 
+Q 3603 2246 3603 1702 
+Q 3603 1158 3436 758 
+Q 3270 358 2966 147 
+Q 2662 -64 2259 -64 
+z
+M 1958 602 
+Q 2355 602 2572 893 
+Q 2790 1184 2790 1702 
+Q 2790 2221 2579 2512 
+Q 2368 2803 1978 2803 
+Q 1600 2803 1385 2537 
+Q 1171 2272 1171 1856 
+L 1171 1549 
+Q 1171 1133 1382 867 
+Q 1594 602 1958 602 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-152" d="M 1869 -58 
+Q 1376 -58 1001 153 
+Q 627 365 419 765 
+Q 211 1165 211 1702 
+Q 211 2227 409 2627 
+Q 608 3027 982 3248 
+Q 1357 3469 1869 3469 
+Q 2362 3469 2736 3254 
+Q 3110 3040 3318 2640 
+Q 3526 2240 3526 1702 
+Q 3526 1178 3328 781 
+Q 3130 384 2755 163 
+Q 2381 -58 1869 -58 
+z
+M 1869 602 
+Q 2259 602 2486 883 
+Q 2714 1165 2714 1702 
+Q 2714 2240 2490 2525 
+Q 2266 2810 1869 2810 
+Q 1472 2810 1248 2525 
+Q 1024 2240 1024 1702 
+Q 1024 1171 1248 886 
+Q 1472 602 1869 602 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-125" d="M 1856 -1197 
+Q 1139 -1197 723 -931 
+Q 307 -666 250 -173 
+L 1088 -173 
+Q 1190 -602 1875 -602 
+Q 2278 -602 2457 -416 
+Q 2637 -230 2637 166 
+L 2643 742 
+L 2611 742 
+Q 2496 435 2208 259 
+Q 1920 83 1536 83 
+Q 1133 83 832 284 
+Q 531 486 364 867 
+Q 198 1248 198 1773 
+Q 198 2573 560 3021 
+Q 922 3469 1536 3469 
+Q 1926 3469 2211 3293 
+Q 2496 3117 2618 2803 
+L 2650 2803 
+L 2669 3405 
+L 3430 3405 
+L 3430 282 
+Q 3430 -506 3030 -851 
+Q 2630 -1197 1856 -1197 
+z
+M 1811 736 
+Q 2182 736 2409 1005 
+Q 2637 1274 2637 1658 
+L 2637 1901 
+Q 2637 2285 2413 2553 
+Q 2189 2822 1818 2822 
+Q 1440 2822 1225 2550 
+Q 1011 2278 1011 1773 
+Q 1011 1280 1222 1008 
+Q 1434 736 1811 736 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-1a" d="M 422 4666 
+L 2579 4666 
+Q 3251 4666 3612 4346 
+Q 3974 4026 3974 3488 
+Q 3974 3117 3769 2848 
+Q 3565 2579 3200 2490 
+L 3200 2458 
+Q 3654 2381 3891 2080 
+Q 4128 1779 4128 1344 
+Q 4128 691 3702 345 
+Q 3277 0 2502 0 
+L 422 0 
+L 422 4666 
+z
+M 2406 659 
+Q 2835 659 3046 854 
+Q 3258 1050 3258 1395 
+Q 3258 1741 3046 1926 
+Q 2835 2112 2464 2112 
+L 1242 2112 
+L 1242 659 
+L 2406 659 
+z
+M 2413 2746 
+Q 2752 2746 2934 2918 
+Q 3117 3091 3117 3373 
+Q 3117 3680 2912 3846 
+Q 2707 4013 2355 4013 
+L 1242 4013 
+L 1242 2746 
+L 2413 2746 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-108" d="M 1862 -58 
+Q 1363 -58 992 160 
+Q 621 378 416 778 
+Q 211 1178 211 1702 
+Q 211 2227 416 2627 
+Q 621 3027 1001 3248 
+Q 1382 3469 1888 3469 
+Q 2528 3469 2947 3123 
+Q 3366 2778 3424 2202 
+L 2618 2202 
+Q 2554 2502 2355 2656 
+Q 2157 2810 1862 2810 
+Q 1459 2810 1241 2512 
+Q 1024 2214 1024 1702 
+Q 1024 1171 1248 886 
+Q 1472 602 1856 602 
+Q 2176 602 2377 765 
+Q 2579 928 2630 1229 
+L 3430 1229 
+Q 3366 640 2940 291 
+Q 2515 -58 1862 -58 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-12b" d="M 371 4774 
+L 1171 4774 
+L 1165 2746 
+L 1203 2746 
+Q 1338 3085 1626 3277 
+Q 1914 3469 2272 3469 
+Q 2810 3469 3120 3120 
+Q 3430 2771 3430 2048 
+L 3430 0 
+L 2637 0 
+L 2637 1862 
+Q 2637 2342 2473 2572 
+Q 2310 2803 1965 2803 
+Q 1606 2803 1388 2537 
+Q 1171 2272 1171 1869 
+L 1171 0 
+L 371 0 
+L 371 4774 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-195" d="M 51 3405 
+L 915 3405 
+L 1472 1504 
+L 1709 704 
+L 1741 704 
+L 1965 1504 
+L 2522 3405 
+L 3379 3405 
+L 2202 0 
+L 1235 0 
+L 51 3405 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-SemiBold-20c" d="M 192 186 
+Q 192 781 528 1251 
+Q 864 1722 1568 2246 
+Q 2029 2592 2227 2822 
+Q 2426 3053 2426 3315 
+Q 2426 3629 2246 3811 
+Q 2067 3994 1754 3994 
+Q 1440 3994 1235 3770 
+Q 1030 3546 1005 3181 
+L 179 3174 
+Q 218 3885 653 4301 
+Q 1088 4717 1792 4717 
+Q 2240 4717 2576 4547 
+Q 2912 4378 3091 4070 
+Q 3270 3763 3270 3360 
+Q 3270 2893 3014 2521 
+Q 2758 2150 2182 1722 
+Q 1709 1363 1478 1152 
+Q 1248 941 1165 698 
+L 3334 704 
+L 3334 0 
+L 192 0 
+L 192 186 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MonaSans-SemiBold-28d" transform="translate(1.40625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-107" transform="translate(35.921875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-28e" transform="translate(89.734375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-1" transform="translate(125.546875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-54" transform="translate(149.15625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-152" transform="translate(203.171875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-14b" transform="translate(262.984375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-125" transform="translate(323.6875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-1a" transform="translate(384.390625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-112" transform="translate(454.890625 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-14b" transform="translate(512.296875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-108" transform="translate(572.703125 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-12b" transform="translate(630.109375 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-1" transform="translate(690.421875 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-195" transform="translate(714.03125 0)"/>
+     <use xlink:href="#MonaSans-SemiBold-20c" transform="translate(769.03125 0)"/>
+    </g>
+   </g>
+   <g id="line2d_30">
+    <path d="M 295.426099 77.015492 
+L 373.976736 112.771603 
+L 452.527372 148.299528 
+" clip-path="url(#pbaaaa6ad5c)" style="fill: none; stroke-dasharray: 6.8,3.4; stroke-dashoffset: 0; stroke: #2a78d6; stroke-width: 1.7"/>
+    <g clip-path="url(#pbaaaa6ad5c)">
+     <use xlink:href="#mbdb596c072" x="295.426099" y="77.015492" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+     <use xlink:href="#mbdb596c072" x="373.976736" y="112.771603" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+     <use xlink:href="#mbdb596c072" x="452.527372" y="148.299528" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_31">
+    <path d="M 295.426099 64.136507 
+L 373.976736 65.308961 
+L 452.527372 65.894438 
+" clip-path="url(#pbaaaa6ad5c)" style="fill: none; stroke: #1f9a5c; stroke-width: 1.7; stroke-linecap: square"/>
+    <g clip-path="url(#pbaaaa6ad5c)">
+     <use xlink:href="#mee80a8cc74" x="295.426099" y="64.136507" style="fill: #1f9a5c; stroke: #ffffff"/>
+     <use xlink:href="#mee80a8cc74" x="373.976736" y="65.308961" style="fill: #1f9a5c; stroke: #ffffff"/>
+     <use xlink:href="#mee80a8cc74" x="452.527372" y="65.894438" style="fill: #1f9a5c; stroke: #ffffff"/>
+    </g>
+   </g>
+  </g>
+  <g id="legend_1">
+   <g id="line2d_32">
+    <path d="M 104.159406 10.56 
+L 110.559406 10.56 
+L 116.959406 10.56 
+" style="fill: none; stroke-dasharray: 4.5,4.5; stroke-dashoffset: 0; stroke: #7b857e; stroke-width: 1.5"/>
+   </g>
+   <g id="text_25">
+    <!-- Native DSA (reference) -->
+    <g style="fill: #4c564f" transform="translate(120.959406 13.36) scale(0.08 -0.08)">
+     <defs>
+      <path id="MonaSans-Regular-5c" d="M 486 4666 
+L 1210 4666 
+L 3674 858 
+L 3706 858 
+L 3680 2387 
+L 3680 4666 
+L 4262 4666 
+L 4262 0 
+L 3546 0 
+L 1094 3782 
+L 1069 3782 
+L 1088 2342 
+L 1088 0 
+L 486 0 
+L 486 4666 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-Regular-200" d="M 1402 0 
+Q 1024 0 873 163 
+Q 723 326 723 666 
+L 723 2899 
+L 83 2899 
+L 83 3366 
+L 723 3366 
+L 723 4365 
+L 1286 4435 
+L 1286 3366 
+L 3270 3366 
+L 3270 0 
+L 2707 0 
+L 2707 2899 
+L 1286 2899 
+L 1286 768 
+Q 1286 595 1350 534 
+Q 1414 474 1581 474 
+L 2042 474 
+L 2042 0 
+L 1402 0 
+z
+M 2995 3923 
+Q 2842 3923 2746 4009 
+Q 2650 4096 2650 4230 
+Q 2650 4371 2746 4457 
+Q 2842 4544 2995 4544 
+Q 3149 4544 3241 4457 
+Q 3334 4371 3334 4230 
+Q 3334 4090 3238 4006 
+Q 3142 3923 2995 3923 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-Regular-195" d="M 77 3366 
+L 691 3366 
+L 1318 1434 
+L 1619 512 
+L 1651 512 
+L 1939 1434 
+L 2566 3366 
+L 3174 3366 
+L 1971 0 
+L 1286 0 
+L 77 3366 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-Regular-21" d="M 480 4666 
+L 2310 4666 
+Q 2957 4666 3424 4378 
+Q 3891 4090 4137 3565 
+Q 4384 3040 4384 2330 
+Q 4384 1626 4137 1098 
+Q 3891 570 3424 285 
+Q 2957 0 2310 0 
+L 480 0 
+L 480 4666 
+z
+M 2227 531 
+Q 2957 531 3363 1004 
+Q 3770 1478 3770 2342 
+Q 3770 3213 3360 3677 
+Q 2950 4141 2227 4141 
+L 1075 4141 
+L 1075 531 
+L 2227 531 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-Regular-2" d="M 1805 4666 
+L 2643 4666 
+L 4326 0 
+L 3680 0 
+L 3232 1274 
+L 1203 1274 
+L 755 0 
+L 122 0 
+L 1805 4666 
+z
+M 3059 1773 
+L 2438 3539 
+L 2240 4147 
+L 2208 4147 
+L 1997 3539 
+L 1376 1773 
+L 3059 1773 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-Regular-28d" d="M 1421 -1069 
+Q 896 -550 589 282 
+Q 282 1114 282 2003 
+Q 282 2893 589 3725 
+Q 896 4557 1421 5075 
+L 1926 5075 
+Q 1421 4550 1129 3715 
+Q 838 2880 838 2003 
+Q 838 1114 1136 278 
+Q 1434 -557 1926 -1069 
+L 1421 -1069 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-Regular-124" d="M 646 2899 
+L 64 2899 
+L 64 3366 
+L 646 3366 
+L 646 3968 
+Q 646 4365 867 4569 
+Q 1088 4774 1498 4774 
+L 1984 4774 
+L 1984 4339 
+L 1606 4339 
+Q 1402 4339 1309 4246 
+Q 1216 4154 1216 3936 
+L 1216 3366 
+L 1926 3366 
+L 1926 2899 
+L 1216 2899 
+L 1216 0 
+L 646 0 
+L 646 2899 
+z
+" transform="scale(0.015625)"/>
+      <path id="MonaSans-Regular-28e" d="M 723 5075 
+Q 1248 4557 1555 3725 
+Q 1862 2893 1862 2003 
+Q 1862 1114 1555 282 
+Q 1248 -550 723 -1069 
+L 218 -1069 
+Q 723 -544 1014 291 
+Q 1306 1126 1306 2003 
+Q 1306 2893 1008 3728 
+Q 710 4563 218 5075 
+L 723 5075 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MonaSans-Regular-5c" transform="translate(1.40625 0)"/>
+     <use xlink:href="#MonaSans-Regular-ef" transform="translate(76.90625 0)"/>
+     <use xlink:href="#MonaSans-Regular-200" transform="translate(136.921875 0)"/>
+     <use xlink:href="#MonaSans-Regular-195" transform="translate(195.9375 0)"/>
+     <use xlink:href="#MonaSans-Regular-112" transform="translate(247.140625 0)"/>
+     <use xlink:href="#MonaSans-Regular-1" transform="translate(303.453125 0)"/>
+     <use xlink:href="#MonaSans-Regular-21" transform="translate(327.5625 0)"/>
+     <use xlink:href="#MonaSans-Regular-82" transform="translate(402.265625 0)"/>
+     <use xlink:href="#MonaSans-Regular-2" transform="translate(466.265625 0)"/>
+     <use xlink:href="#MonaSans-Regular-1" transform="translate(537.078125 0)"/>
+     <use xlink:href="#MonaSans-Regular-28d" transform="translate(561.1875 0)"/>
+     <use xlink:href="#MonaSans-Regular-16d" transform="translate(589.78125 0)"/>
+     <use xlink:href="#MonaSans-Regular-112" transform="translate(622.6875 0)"/>
+     <use xlink:href="#MonaSans-Regular-124" transform="translate(677.90625 0)"/>
+     <use xlink:href="#MonaSans-Regular-112" transform="translate(710.109375 0)"/>
+     <use xlink:href="#MonaSans-Regular-16d" transform="translate(766.21875 0)"/>
+     <use xlink:href="#MonaSans-Regular-112" transform="translate(799.125 0)"/>
+     <use xlink:href="#MonaSans-Regular-14b" transform="translate(855.234375 0)"/>
+     <use xlink:href="#MonaSans-Regular-108" transform="translate(914.03125 0)"/>
+     <use xlink:href="#MonaSans-Regular-112" transform="translate(970.140625 0)"/>
+     <use xlink:href="#MonaSans-Regular-28e" transform="translate(1018.359375 0)"/>
+    </g>
+   </g>
+   <g id="line2d_33">
+    <path d="M 216.308156 10.56 
+L 222.708156 10.56 
+L 229.108156 10.56 
+" style="fill: none; stroke-dasharray: 6.8,3.4; stroke-dashoffset: 0; stroke: #2a78d6; stroke-width: 1.7"/>
+    <g>
+     <use xlink:href="#mbdb596c072" x="222.708156" y="10.56" style="fill: #2a78d6; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="text_26">
+    <!-- LiSA -->
+    <g style="fill: #4c564f" transform="translate(233.108156 13.36) scale(0.08 -0.08)">
+     <use xlink:href="#MonaSans-Regular-54" transform="translate(1.40625 0)"/>
+     <use xlink:href="#MonaSans-Regular-12e" transform="translate(57.015625 0)"/>
+     <use xlink:href="#MonaSans-Regular-82" transform="translate(80.328125 0)"/>
+     <use xlink:href="#MonaSans-Regular-2" transform="translate(144.328125 0)"/>
+    </g>
+   </g>
+   <g id="line2d_34">
+    <path d="M 261.406906 10.56 
+L 267.806906 10.56 
+L 274.206906 10.56 
+" style="fill: none; stroke: #1f9a5c; stroke-width: 1.7; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#mee80a8cc74" x="267.806906" y="10.56" style="fill: #1f9a5c; stroke: #ffffff"/>
+    </g>
+   </g>
+   <g id="text_27">
+    <!-- DoSA++ (8K candidates) -->
+    <g style="fill: #4c564f" transform="translate(278.206906 13.36) scale(0.08 -0.08)">
+     <defs>
+      <path id="MonaSans-Regular-2cd" d="M 1606 2080 
+L 339 2080 
+L 339 2541 
+L 1606 2541 
+L 1606 3834 
+L 2080 3834 
+L 2080 2541 
+L 3347 2541 
+L 3347 2080 
+L 2080 2080 
+L 2080 787 
+L 1606 787 
+L 1606 2080 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#MonaSans-Regular-21" transform="translate(1.40625 0)"/>
+     <use xlink:href="#MonaSans-Regular-152" transform="translate(77.203125 0)"/>
+     <use xlink:href="#MonaSans-Regular-82" transform="translate(137.203125 0)"/>
+     <use xlink:href="#MonaSans-Regular-2" transform="translate(201.203125 0)"/>
+     <use xlink:href="#MonaSans-Regular-2cd" transform="translate(266.8125 0)"/>
+     <use xlink:href="#MonaSans-Regular-2cd" transform="translate(322.21875 0)"/>
+     <use xlink:href="#MonaSans-Regular-1" transform="translate(381.125 0)"/>
+     <use xlink:href="#MonaSans-Regular-28d" transform="translate(405.234375 0)"/>
+     <use xlink:href="#MonaSans-Regular-212" transform="translate(434.9375 0)"/>
+     <use xlink:href="#MonaSans-Regular-52" transform="translate(495.953125 0)"/>
+     <use xlink:href="#MonaSans-Regular-1" transform="translate(563.0625 0)"/>
+     <use xlink:href="#MonaSans-Regular-108" transform="translate(587.171875 0)"/>
+     <use xlink:href="#MonaSans-Regular-ef" transform="translate(643.484375 0)"/>
+     <use xlink:href="#MonaSans-Regular-14b" transform="translate(703.5 0)"/>
+     <use xlink:href="#MonaSans-Regular-10e" transform="translate(762.296875 0)"/>
+     <use xlink:href="#MonaSans-Regular-12e" transform="translate(822.59375 0)"/>
+     <use xlink:href="#MonaSans-Regular-10e" transform="translate(845.796875 0)"/>
+     <use xlink:href="#MonaSans-Regular-ef" transform="translate(905.796875 0)"/>
+     <use xlink:href="#MonaSans-Regular-178" transform="translate(965.8125 0)"/>
+     <use xlink:href="#MonaSans-Regular-112" transform="translate(1000.125 0)"/>
+     <use xlink:href="#MonaSans-Regular-171" transform="translate(1056.734375 0)"/>
+     <use xlink:href="#MonaSans-Regular-28e" transform="translate(1100.546875 0)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdf67310e20">
+   <rect x="40.136531" y="53.074" width="196.376591" height="108.088"/>
+  </clipPath>
+  <clipPath id="pbaaaa6ad5c">
+   <rect x="275.78844" y="53.074" width="196.376591" height="108.088"/>
+  </clipPath>
+ </defs>
+</svg>
