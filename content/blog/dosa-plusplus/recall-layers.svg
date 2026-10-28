@@ -2774,7 +2774,7 @@ L 203.578078 25.23
     </g>
    </g>
    <g id="text_29">
-    <!-- LiSA -->
+    <!-- LISA -->
     <g style="fill: #4c564f" transform="translate(207.478078 27.96) scale(0.078 -0.078)">
      <defs>
       <path id="MonaSans-Regular-54" d="M 486 4666 
@@ -2788,9 +2788,9 @@ z
 " transform="scale(0.015625)"/>
      </defs>
      <use xlink:href="#MonaSans-Regular-54" transform="translate(1.40625 0)"/>
-     <use xlink:href="#MonaSans-Regular-12e" transform="translate(57.015625 0)"/>
-     <use xlink:href="#MonaSans-Regular-82" transform="translate(80.328125 0)"/>
-     <use xlink:href="#MonaSans-Regular-2" transform="translate(144.328125 0)"/>
+     <use xlink:href="#MonaSans-Regular-41" transform="translate(57.015625 0)"/>
+     <use xlink:href="#MonaSans-Regular-82" transform="translate(83.21875 0)"/>
+     <use xlink:href="#MonaSans-Regular-2" transform="translate(147.21875 0)"/>
     </g>
    </g>
    <g id="line2d_48">

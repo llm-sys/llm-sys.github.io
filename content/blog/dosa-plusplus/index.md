@@ -34,7 +34,7 @@ Work on this bottleneck splits along the dimension it attacks. [IndexCache](http
 
 [DoSA](/blog/dosa/) made that operation conditional: bound a key's score from a few heads, and reject it outright when the bound falls below a threshold the seed keys already guarantee. Rejection is certified, so the Top-K never changes.
 
-DoSA++ attacks the same bottleneck from the other side. Instead of bounding what it skips, it predicts what to keep. One dot product per key proposes a candidate set; the original multi-head scorer then ranks those candidates. The prediction is cheap because of a structural fact about the indexer: ReLU makes it piecewise linear, so once the activation pattern is fixed, every head collapses into a single vector.
+DoSA++ attacks the same bottleneck from the other side. <mark><strong>Instead of bounding what it skips, it predicts what to keep.</strong></mark> One dot product per key proposes a candidate set; the original multi-head scorer then ranks those candidates. The prediction is cheap because of a structural fact about the indexer: ReLU makes it piecewise linear, so once the activation pattern is fixed, every head collapses into a single vector.
 
 The pattern is not known in advance, but it can be estimated. DoSA++ samples a few hundred keys per query, scores them with the full indexer, and measures how often each head fires among the highest-scoring ones. Those rates become the coefficients of one folded query, which carries every head's original signed weight and its estimated activation rate near the part of the score distribution that decides selection. The broad scan then costs one dot product per key instead of $H$, and full-head scoring is reserved for the seed keys and the surviving candidates.
 
@@ -100,7 +100,7 @@ Each term is a head's weight times how far its true gate sits from the estimated
 
 Dropping heads and folding heads are different operations. A subset scorer evaluates a few heads and ignores the rest, so the omitted heads contribute nothing — which is why DoSA has to bound them to stay exact, and why reranking cannot recover a key the screen discarded.
 
-[LiSA](https://github.com/MuLabPKU/TransArch/blob/main/LISA/lisa.pdf) folds instead of drops. Applying $\mathrm{ReLU}(x) = x + \mathrm{ReLU}(-x)$ splits the score exactly into a linear term plus a head-wise correction; since all heads share one key, the linear term collapses into a single dot product. LiSA ranks keys by that term alone and omits the correction, which is equivalent to fixing every gate at one.
+[LISA](https://github.com/MuLabPKU/TransArch/blob/main/LISA/lisa.pdf) folds instead of drops. Applying $\mathrm{ReLU}(x) = x + \mathrm{ReLU}(-x)$ splits the score exactly into a linear term plus a head-wise correction; since all heads share one key, the linear term collapses into a single dot product. LISA ranks keys by that term alone and omits the correction, which is equivalent to fixing every gate at one.
 
 DoSA++ keeps the same one-dot-product-per-key budget but sets each gate to its estimated rate $\widehat p_h$ instead of to one. A head that rarely fires near the top of the distribution is scaled down rather than counted in full. The estimate costs 512 full-head probes per query, and in exchange the folded direction adapts to the query and its current key cache.
 
@@ -141,7 +141,7 @@ where $\bar C$ is the average number of non-seed candidates scored per query aft
 
 ## Results
 
-We evaluate GLM-5.2-FP8 under [SGLang](https://arxiv.org/abs/2312.07104) with eight-way tensor parallelism and 16K-token prefill chunks. The baselines are native DSA as SGLang implements it, [LiSA](https://github.com/MuLabPKU/TransArch/blob/main/LISA/lisa.pdf) with its head-fused linear score, and [HISA](https://arxiv.org/abs/2603.28458), which screens 128-token blocks hierarchically before refining inside the survivors. Runtime measurements use a 6K candidate target; quality measurements use 8K.
+We evaluate GLM-5.2-FP8 under [SGLang](https://arxiv.org/abs/2312.07104) with eight-way tensor parallelism and 16K-token prefill chunks. The baselines are native DSA as SGLang implements it, [LISA](https://github.com/MuLabPKU/TransArch/blob/main/LISA/lisa.pdf) with its head-fused linear score, and [HISA](https://arxiv.org/abs/2603.28458), which screens 128-token blocks hierarchically before refining inside the survivors. Runtime measurements use a 6K candidate target; quality measurements use 8K.
 
 ### Prefill
 
@@ -163,30 +163,30 @@ At 1M tokens with 16K chunks the speedups are 7.63×, 7.51×, and 7.57× for Eng
 
 An approximate scan is only useful if the keys it proposes are the ones the original indexer would have chosen. We measure token-set recall against native DSA: with $\mathcal T$ the reference selection and $\widehat{\mathcal T}$ the approximate one, $\operatorname{Recall} = |\widehat{\mathcal T} \cap \mathcal T| / |\mathcal T|$.
 
-{{< figure src="recall-benchmarks.svg" alt="GLM-5.2 token-set recall for LiSA and DoSA++ on RULER and LongBench v2" class="wide" >}}
-Token-set recall on GLM-5.2 with an 8K candidate budget. [RULER](https://arxiv.org/abs/2404.06654) uses 7,800 examples per model, 1,300 at each of six context lengths; [LongBench v2](https://arxiv.org/abs/2412.15204) uses 503 multiple-choice questions with greedy decoding. DoSA++ holds above 99.88% at every length, while LiSA's recall falls as the context grows.
+{{< figure src="recall-benchmarks.svg" alt="GLM-5.2 token-set recall for LISA and DoSA++ on RULER and LongBench v2" class="wide" >}}
+Token-set recall on GLM-5.2 with an 8K candidate budget. [RULER](https://arxiv.org/abs/2404.06654) uses 7,800 examples per model, 1,300 at each of six context lengths; [LongBench v2](https://arxiv.org/abs/2412.15204) uses 503 multiple-choice questions with greedy decoding. DoSA++ holds above 99.88% at every length, while LISA's recall falls as the context grows.
 {{< /figure >}}
 
-Mean recall is 99.96% on RULER and 99.90% on LongBench v2. At $K = 2048$ that is roughly 0.7 and 2.0 missed keys per query. LiSA reaches 96.83% at 128K on RULER and 94.36% on LongBench v2's long inputs, where the same arithmetic gives 65 and 116 missed keys.
+Mean recall is 99.96% on RULER and 99.90% on LongBench v2. At $K = 2048$ that is roughly 0.7 and 2.0 missed keys per query. LISA reaches 96.83% at 128K on RULER and 94.36% on LongBench v2's long inputs, where the same arithmetic gives 65 and 116 missed keys.
 
 Downstream scores sit within a point of each other on both benchmarks:
 
 | Method | RULER | LongBench v2 |
 | :--- | ---: | ---: |
 | Native DSA | 97.59 | 52.49 |
-| LiSA | 97.50 | 52.49 |
+| LISA | 97.50 | 52.49 |
 | **DoSA++** | **97.56** | **53.28** |
 {caption="GLM-5.2 RULER score and LongBench v2 accuracy (%). The LongBench v2 column spans 0.79 points across all three methods, or four answers out of 503."}
 
 To compare against HISA on identical inputs, we replay captured prefill queries: four long-context inputs per model across all indexer layers, 544 queries in total, at about 1M tokens for GLM-5.2 and 512K for Dots3 Note Preview. HISA runs at both its 8K candidate budget and its 4:1 block-compression setting.
 
-{{< figure src="recall-layers.svg" alt="Layer-wise token-set recall for HISA, LiSA, and DoSA++ on identical captured queries" class="wide" >}}
+{{< figure src="recall-layers.svg" alt="Layer-wise token-set recall for HISA, LISA, and DoSA++ on identical captured queries" class="wide" >}}
 Layer-wise recall on captured prefill queries, each curve averaging four inputs. DoSA++ stays near the reference across depth on both models; the block-screening and linear-fold baselines vary by tens of points from layer to layer.
 {{< /figure >}}
 
-DoSA++ averages 99.50% on GLM-5.2 and 97.47% on Dots3. HISA reaches 42.28% with 8K candidates and 86.32% with 4:1 compression, and LiSA reaches 70.44%, on the same GLM-5.2 queries. The gap is wider on Dots3: 97.47% against 34.70%, 79.65%, and 44.27%.
+DoSA++ averages 99.50% on GLM-5.2 and 97.47% on Dots3. HISA reaches 42.28% with 8K candidates and 86.32% with 4:1 compression, and LISA reaches 70.44%, on the same GLM-5.2 queries. The gap is wider on Dots3: 97.47% against 34.70%, 79.65%, and 44.27%.
 
-Two things explain the spread. Block screening commits to a region before looking inside it, so a single high-scoring key in an otherwise unremarkable block can be lost with the block. And LiSA's recall varies with how far the omitted nonlinear correction moves the ranking in each layer, which is exactly what the estimated rates in Equation&nbsp;(4) are meant to absorb.
+Two things explain the spread. Block screening commits to a region before looking inside it, so a single high-scoring key in an otherwise unremarkable block can be lost with the block. And LISA's recall varies with how far the omitted nonlinear correction moves the ranking in each layer, which is exactly what the estimated rates in Equation&nbsp;(4) are meant to absorb.
 
 ## What this shares with DoSA, and what it does not
 
