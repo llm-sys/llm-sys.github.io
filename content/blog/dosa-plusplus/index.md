@@ -1,29 +1,21 @@
 ---
-title: "DoSA++: One Query, One Scan"
-subtitle: "Sparse attention reads few keys, but choosing them still costs a full multi-head scan. DoSA++ folds every indexer head into a single query vector, so the broad search costs one dot product per key."
+title: "DoSA++: One Query, One Scan for Sparse Attention"
+subtitle: "Sparse attention reads few keys, but choosing them still costs a full multi-head scan. DoSA++ estimates which heads activate among high-scoring keys, folds every head into a single query direction, and proposes candidates with one dot product per key — then hands them to the original scorer to rank."
 description: "DoSA++ makes sparse-attention indexing cheap by folding all indexer heads into one query direction using activation rates estimated per query, then refining a small candidate set with the original scorer. 2.35× faster time to first token at 1M tokens, with 99.9% token-set recall."
 date: 2026-10-28
 authors:
   - name: Taosong Fang
     affil: [1]
-    marks: ["*"]
   - name: Zhixin Pan
     affil: [1]
-    marks: ["*"]
   - name: Fanxu Meng
     affil: [1]
-    marks: ["†"]
+    marks: ["*"]
 affiliations:
   - Dots Studio, Xiaohongshu Inc.
 notes:
   - mark: "*"
-    text: Equal contribution.
-  - mark: "†"
     text: Corresponding author.
-links:
-  - label: Code
-    url: https://github.com/llm-sys/dosa-sglang
-    icon: github
 tags: [sparse attention, long context, GPU kernels]
 accent: coral
 citekey: fang2026dosapp
@@ -35,7 +27,11 @@ Work on this bottleneck splits along the dimension it attacks. [IndexCache](http
 
 [DoSA](/blog/dosa/) made that operation conditional: bound a key's score from a few heads, and reject it outright when the bound falls below a threshold the seed keys already guarantee. Rejection is certified, so the Top-K never changes.
 
-DoSA++ attacks the same bottleneck from the other side. Instead of bounding what it skips, it predicts what to keep. One dot product per key proposes a candidate set; the original multi-head scorer then ranks those candidates. The prediction is cheap because of a structural fact about the indexer: once you know which heads fire, all of them collapse into a single vector.
+DoSA++ attacks the same bottleneck from the other side. Instead of bounding what it skips, it predicts what to keep. One dot product per key proposes a candidate set; the original multi-head scorer then ranks those candidates. The prediction is cheap because of a structural fact about the indexer: ReLU makes it piecewise linear, so once the activation pattern is fixed, every head collapses into a single vector.
+
+The pattern is not known in advance, but it can be estimated. DoSA++ samples a few hundred keys per query, scores them with the full indexer, and measures how often each head fires among the highest-scoring ones. Those rates become the coefficients of one folded query, which carries every head's original signed weight and its estimated activation rate near the part of the score distribution that decides selection. The broad scan then costs one dot product per key instead of $H$, and full-head scoring is reserved for the seed keys and the surviving candidates.
+
+This separates a broad, inexpensive search from a small, expressive ranking stage. Nothing is retrained: the folded direction is rebuilt per query from the pretrained indexer parameters and whatever is currently in the key cache.
 
 {{< stats class="wide" >}}
 2.35× | Faster time to first token | GLM-5.2-FP8 at 1M tokens, TP8; 131.4 s to 56.0 s
@@ -196,5 +192,3 @@ The recall numbers measure agreement with native DSA's selection, not task accur
 Calibration assumes the high-scoring tail of 512 probes represents the high-scoring region of the whole cache. Inputs whose relevant keys cluster in a region those probes miss would get a worse folded direction, and the failure mode is silent — a missing candidate leaves no trace in the output. The method also scans every key, so short contexts cannot amortize the calibration cost, and the per-query probes are pure overhead when $N$ is small.
 
 A segmented variant could estimate rates separately per region, which would help when activation structure varies across the context. The design here uses one direction per query.
-
-The code is in [llm-sys/dosa-sglang](https://github.com/llm-sys/dosa-sglang).
