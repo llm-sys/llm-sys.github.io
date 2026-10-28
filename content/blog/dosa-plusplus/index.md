@@ -109,7 +109,7 @@ $$
 
 Two thresholds do different jobs here. The scan cutoff $\theta$ proposes candidates from predicted scores; the seed threshold discards *computed* original scores that already fall below the $K$-th seed score, which trims the final selection. Ranking always uses the original score, so an approximate scan cannot distort the ordering of what it proposes — it can only fail to propose something.
 
-That is the honest trade. DoSA's rejections are certified: its Top-K is exactly the full scan's. DoSA++ gives up the certificate for a cheaper broad pass, and pays for it in recall — about one to two missed keys per query out of 2,048, as measured below.
+DoSA's rejections are certified, so its Top-K is exactly the full scan's. DoSA++ trades that certificate for a cheaper broad pass and loses one to two keys per query out of 2,048, measured below.
 
 ## GPU execution
 
@@ -158,14 +158,14 @@ Token-set recall on GLM-5.2 with an 8K candidate budget. [RULER](https://arxiv.o
 
 Mean recall is 99.96% on RULER and 99.90% on LongBench v2. At $K = 2048$ that is roughly 0.7 and 2.0 missed keys per query. LiSA reaches 96.83% at 128K on RULER and 94.36% on LongBench v2's long inputs, where the same arithmetic gives 65 and 116 missed keys.
 
-Downstream quality follows. RULER is statistically unchanged, and LongBench v2 accuracy is slightly higher:
+Downstream scores sit within a point of each other on both benchmarks:
 
 | Method | RULER | LongBench v2 |
 | :--- | ---: | ---: |
 | Native DSA | 97.59 | 52.49 |
 | LiSA | 97.50 | 52.49 |
 | **DoSA++** | **97.56** | **53.28** |
-{caption="GLM-5.2 RULER score and LongBench v2 accuracy (%). The 0.80-point LongBench v2 gain is four more correct answers out of 503 — within noise at this sample size, and reported here to show that an 8K candidate budget costs nothing measurable, not as evidence that approximation helps."}
+{caption="GLM-5.2 RULER score and LongBench v2 accuracy (%). The LongBench v2 column spans 0.79 points across all three methods, or four answers out of 503."}
 
 To compare against HISA on identical inputs, we replay captured prefill queries: four long-context inputs per model across all indexer layers, 544 queries in total, at about 1M tokens for GLM-5.2 and 512K for Dots3 Note Preview. HISA runs at both its 8K candidate budget and its 4:1 block-compression setting.
 
@@ -183,12 +183,12 @@ Both methods run a cheap broad pass, compact the survivors, score them with the 
 
 The broad pass is where they part. DoSA computes an upper bound and rejects only when the bound proves the key cannot win; its output is exactly the full scan's Top-K, and its speedup is limited by how tight those bounds are. DoSA++ predicts scores from one folded direction and accepts a small recall loss; the prediction has no guarantee attached, and the gain is correspondingly larger.
 
-Which trade is right depends on whether exactness is a requirement or a preference. DoSA++ needs no retraining and reuses the pretrained indexer parameters as they are, so the choice is a serving-time one.
+Both reuse the pretrained indexer parameters without retraining, so switching between them is a serving-time decision.
 
 ## Limitations
 
-The recall numbers measure agreement with native DSA's selection, not task accuracy, and the two benchmarks here are not sensitive enough to resolve a sub-percent difference in downstream quality. A 0.80-point LongBench v2 gain on 503 questions is four answers; we report it to show the budget is sufficient, not to claim approximation improves the model.
+Recall measures agreement with native DSA's selection, not task accuracy. Neither benchmark here resolves sub-percent differences in downstream quality.
 
-Calibration assumes the high-scoring tail of 512 probes represents the high-scoring region of the whole cache. Inputs whose relevant keys cluster in a region those probes miss would get a worse folded direction, and the failure mode is silent — a missing candidate leaves no trace in the output. The method also scans every key, so short contexts cannot amortize the calibration cost, and the per-query probes are pure overhead when $N$ is small.
+Calibration assumes the high-scoring tail of 512 probes represents the high-scoring region of the whole cache. When the relevant keys cluster where those probes do not land, the folded direction is worse and nothing in the output says so. The scan still visits every key, so short contexts cannot amortize the probes.
 
 A segmented variant could estimate rates separately per region, which would help when activation structure varies across the context. The design here uses one direction per query.
