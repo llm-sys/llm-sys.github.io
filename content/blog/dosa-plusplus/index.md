@@ -191,4 +191,10 @@ Recall measures agreement with native DSA's selection, not task accuracy. Neithe
 
 Calibration assumes the high-scoring tail of 512 probes represents the high-scoring region of the whole cache. When the relevant keys cluster where those probes do not land, the folded direction is worse and nothing in the output says so. The scan still visits every key, so short contexts cannot amortize the probes.
 
-A segmented variant could estimate rates separately per region, which would help when activation structure varies across the context. The design here uses one direction per query.
+## Future work
+
+One folded direction per query assumes the gates behave the same way throughout the cache. They often do not: a long input can switch topic, language, or file partway through, and the heads that fire among its high-scoring keys shift with it. Averaging those regimes into a single $\widehat p_h$ gives a direction that fits none of them well.
+
+We are extending DoSA++ to estimate rates per region. The scan splits the key range into segments, calibrates a folded direction inside each from its own probes, and compares each key against the direction built for the segment it sits in. The scan cost per key is unchanged — still one dot product — and calibration grows with the segment count, which is the term Equation&nbsp;(7) shows is multiplied by $H$. The open questions are how to place segment boundaries without a second pass over the keys, and how to keep a shared cutoff meaningful when each segment's scores come from a different direction.
+
+Two further directions follow from the same structure. Calibration currently runs per query and per layer; if neighbouring layers turn out to agree on which heads matter, one folded direction could serve several of them and amortize the probes the way [IndexCache](https://arxiv.org/abs/2603.12201) amortizes index reuse. We have not measured that agreement yet, and it is the first thing to check. Separately, a missing candidate leaves no trace today, so a cheap bound on the folded score — [DoSA](/blog/dosa/)'s certificate applied to $\widetilde s_i$ rather than $s_i$ — would let the scan flag a query whose candidate set is unreliable instead of failing quietly.
