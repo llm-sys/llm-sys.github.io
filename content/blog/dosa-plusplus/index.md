@@ -1,6 +1,13 @@
 ---
 title: "DoSA++: One Query, One Scan for Sparse Attention"
-subtitle: "Sparse attention reads few keys, but choosing them still costs a full multi-head scan. DoSA++ estimates which heads activate among high-scoring keys, folds every head into a single query direction, and proposes candidates with one dot product per key — then hands them to the original scorer to rank."
+subtitle: >-
+  Sparse attention reads few keys, but choosing them can still require a full multi-head scan of the context.
+  DoSA++ turns this search into one dot product per key. It estimates head activation rates from high-scoring samples,
+  folds all query heads into a single direction, and uses the resulting scores to select candidates for refinement
+  with the original multi-head indexer. The method adapts to each query and its current key cache without retraining.
+  On GLM-5.2, DoSA++ accelerates time to first token by 2.35× at 1M tokens and the complete indexer by up to 8.01×.
+  It recovers 99.96% of native DSA's selected keys on RULER and 99.90% on LongBench v2,
+  while maintaining RULER performance and improving LongBench v2 accuracy.
 description: "DoSA++ makes sparse-attention indexing cheap by folding all indexer heads into one query direction using activation rates estimated per query, then refining a small candidate set with the original scorer. 2.35× faster time to first token at 1M tokens, with 99.9% token-set recall."
 date: 2026-10-28
 authors:
@@ -123,7 +130,11 @@ Compaction converts the bitmap into candidate IDs. Grouped queries share candida
 Dense indexing costs $\Theta(MNHD)$ dot-product work. DoSA++ spends
 
 $$
-\underbrace{M m_a H D}_{\text{gate calibration}} + \underbrace{M m_r D}_{\text{cutoff calibration}} + \underbrace{M (N - S) D}_{\text{folded scan}} + \underbrace{M S H D}_{\text{seed scoring}} + \underbrace{M \bar C H D}_{\text{refinement}} , \tag{7}
+\begin{aligned}
+&\underbrace{M m_a H D}_{\text{gate calibration}} + \underbrace{M m_r D}_{\text{cutoff calibration}} \\
+&+ \underbrace{M (N - S) D}_{\text{folded scan}} + \underbrace{M S H D}_{\text{seed scoring}} \\
+&+ \underbrace{M \bar C H D}_{\text{refinement}} .
+\end{aligned} \tag{7}
 $$
 
 where $\bar C$ is the average number of non-seed candidates scored per query after sharing. Only the $N$-sized term is multiplied by the full context, and that term has lost its factor of $H$. Everything still carrying $H$ is sized by $m_a$, $S$, or $\bar C$, all of which stay fixed as the context grows. The memory path splits the same way: a compact bitmap from the scan, gathered keys in refinement, and a small set of original-score records for selection.
@@ -193,8 +204,8 @@ Calibration assumes the high-scoring tail of 512 probes represents the high-scor
 
 ## Future work
 
-One folded direction per query assumes the gates behave the same way throughout the cache. They often do not: a long input can switch topic, language, or file partway through, and the heads that fire among its high-scoring keys shift with it. Averaging those regimes into a single $\widehat p_h$ gives a direction that fits none of them well.
+Our ongoing work combines global and local folded queries. A global direction estimates activation rates across the full context; local directions estimate them separately within context segments. Each segment supplies its own high-scoring samples, allowing the local predictor to follow changes in topic, language, or document structure that a single global estimate can average away.
 
-We are extending DoSA++ to estimate rates per region. The scan splits the key range into segments, calibrates a folded direction inside each from its own probes, and compares each key against the direction built for the segment it sits in. The scan cost per key is unchanged — still one dot product — and calibration grows with the segment count, which is the term Equation&nbsp;(7) shows is multiplied by $H$. The open questions are how to place segment boundaries without a second pass over the keys, and how to keep a shared cutoff meaningful when each segment's scores come from a different direction.
+We are also using query sharing to make these two views complement each other. Within a group of queries that shares candidates, some queries use global prediction and others use shared local prediction. Their candidate sets are merged before refinement with the original scorer. This gives the group both a context-wide view and region-specific views without running both scans for every query. We are evaluating how to divide the group between the two predictors and allocate their candidate budgets to improve recall while preserving the speed of the folded scan.
 
-Two further directions follow from the same structure. Calibration currently runs per query and per layer; if neighbouring layers turn out to agree on which heads matter, one folded direction could serve several of them and amortize the probes the way [IndexCache](https://arxiv.org/abs/2603.12201) amortizes index reuse. We have not measured that agreement yet, and it is the first thing to check. Separately, a missing candidate leaves no trace today, so a cheap bound on the folded score — [DoSA](/blog/dosa/)'s certificate applied to $\widetilde s_i$ rather than $s_i$ — would let the scan flag a query whose candidate set is unreliable instead of failing quietly.
+We will release the code and a full technical report covering DoSA++ and these global–local extensions.

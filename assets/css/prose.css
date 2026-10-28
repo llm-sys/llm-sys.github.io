@@ -158,6 +158,17 @@
 .prose > .katex-display + *,
 .prose > p:has(> .katex-display:only-child) + * { margin-top: 1.5rem; }
 
+/* Keep equation numbers beyond the formula when a small screen needs scrolling. */
+@media (max-width: 45rem) {
+  .prose .katex-display > .katex {
+    width: max-content;
+    min-width: 100%;
+  }
+  .prose .katex-display > .katex > .katex-html:has(> .katex-tag) {
+    padding-right: 2em;
+  }
+}
+
 /* Figures */
 
 .prose figure { margin-inline: 0; }
